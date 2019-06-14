@@ -16,14 +16,14 @@
                                 </button>
                                 <!-- Brand -->
                                 <img src="<?=base_url()?>assets/images/logo-ambon.png" width="60px" style="float:left;margin-top:5px">
-                                <a class="navbar-brand page-scroll sticky-logo" href="http://localhost/kecsirimau/">                                    
+                                <a class="navbar-brand page-scroll sticky-logo" href="<?= site_url()?>">                                    
                                     <h1><span>Kecamatan</span> Sirimau</h1>
                                 </a>
                             </div>
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">                                
                                 <ul class="nav navbar-nav navbar-right">
-                                      <li class="active"><a class="page-scroll" href="http://localhost/kecsirimau/">Beranda</a></li>
+                                      <li class="active"><a class="page-scroll" href="<?= site_url()?>">Beranda</a></li>
                                       <li ><a class="page-scroll" href="#profil">Profil</a></li>
                                       <li ><a class="page-scroll" href="#kelurahan">Kelurahan</a></li>
                                       <li ><a class="page-scroll" href="#informasi">Informasi</a></li>

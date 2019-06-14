@@ -276,398 +276,37 @@
             </div>
             <div class="row text-center">                
                 <div class="services-contents">
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="negeri-batu-merah"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Negeri Batu Merah</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Negeri Batu Merah</em></strong> adalah desa di kecamatan Sirimau, Kota Ambon, Maluku, Indonesia.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="negeri-galala"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Negeri Galala</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Negeri Galala</em></strong> adalah sebuah negeri di Kecamatan Sirimau, Kota Ambon, Maluku.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="negeri-hative-kecil"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Negeri Hative Kecil</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Negeri Hative Kecil </em></strong>adalah negeri di kecamatan Sirimau, Kota Ambon, Maluku, Indonesia.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="negeri-soya"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Negeri Soya</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Negeri Soya</em></strong> adalah sebuah negeri yang terletak di Kecamatan Sirimau, Ambon, Maluku.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="kelurahan-ahusen"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Kelurahan Ahusen</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Kelurahan Ahusen</em></strong> adalah desa di kecamatan Teluk Ambon, Kota Ambon, Maluku, Indonesia.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="kelurahan-amantelu"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Kelurahan Amantelu</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Kelurahan Amantelu </em></strong>adalah kelurahan yang terletak di kecamatan Sirimau, Ambon, Maluku.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="kelurahan-batu-gajah"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Kelurahan Batu Gajah</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Kelurahan Batu Gajah </em></strong>adalah sebuah kelurahan yang terletak Kecamatan Sirimau, Ambon, Maluku.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="kelurahan-batu-meja"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Kelurahan Batu Meja</h4>
-                                        <p>alamt</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Kelurahan Batu Meja </em></strong>adalah sebuah kelurahan yang terletak Kecamatan Sirimau, Ambon, Maluku.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="kelurahan-honipopu"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Kelurahan Honipopu</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Kelurahan Honipopu </em></strong>adalah sebuah kelurahan yang terletak Kecamatan Sirimau, Ambon, Maluku.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="kelurahan-karang-panjang"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Kelurahan Karang Panjang</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Kelurahan Karang Panjang </em></strong>adalah sebuah kelurahan yang terletak Kecamatan Sirimau, Ambon, Maluku.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="kelurahan-pandan-kasturi"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Kelurahan Pandan Kasturi</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Kelurahan Pandan Kasturi </em></strong>adalah sebuah kelurahan yang terletak Kecamatan Sirimau, Ambon, Maluku.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="kelurahan-rijali"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Kelurahan Rijali</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Kelurahan Rijali </em></strong>adalah sebuah kelurahan yang terletak Kecamatan Sirimau, Ambon, Maluku.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="kelurahan-uritetu"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Kelurahan Uritetu</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Kelurahan Uritetu </em></strong>adalah sebuah kelurahan yang terletak Kecamatan Sirimau, Ambon, Maluku.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
-                      <div class="row">
-                            <div class="pri_table_list active">                                                                                                           
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
-                                        <a href="kelurahan-waihoka"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
-                                        <h4>Kelurahan Waihoka</h4>
-                                        <p>Alamat</p>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
-                                        <strong><em>Kelurahan Waihoka </em></strong>adalah sebuah kelurahan yang terletak Kecamatan Sirimau, Ambon, Maluku.                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
-                                        <p>Jumlah penduduk Laki-Laki sebanyak<br><strong>0</strong> jiwa</p>                                        
-                                    </div>                                                
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
-                                        <p>Jumlah penduduk Perempuan sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                                   
-                                    <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
-                                        <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
-                                            <i class="fa fa-users" style="color:lightgreen"></i>
-                                        </a>
-                                        <p>Jumlah penduduk sebanyak<br><strong>0</strong> jiwa</p>                                                
-                                    </div>                                    
-                                </div>                                                                                                         
-                            </div>                           
-                        </div>
-                        <br>
+                <?php foreach($desas as $desa): ?>
+                    <div class="row">
+                        <div class="pri_table_list active">                                                                                                           
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top:10px;border-right:1px solid #ccc;">                                        
+                                    <a href="negeri-batu-merah"><img src="assets/images/logo-ambon.png" width="100px" alt=""></a>
+                                    <h4><?= $desa->nama; ?></h4>
+                                    <p><?= $desa->alamat; ?></p>
+                                </div>
+                                <div class="col-md-9 col-sm-9 col-xs-12" style="padding:10px 40px 10px;text-align:justify">                                        
+                                    <?= $desa->profil; ?>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
+                                    <a class="services-icon" href="#"><i class="fa fa-male" style="color:skyblue"></i></a>
+                                    <p>Jumlah penduduk Laki-Laki sebanyak<br><strong><?= $desa->jumlah_laki; ?></strong> jiwa</p>                                        
+                                </div>                                                
+                                <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
+                                    <a class="services-icon" href="#"><i class="fa fa-female" style="color:pink"></i></a>
+                                    <p>Jumlah penduduk Perempuan sebanyak<br><strong><?= $desa->jumlah_perempuan; ?></strong> jiwa</p>                                                
+                                </div>                                                   
+                                <div class="col-md-3 col-sm-4 col-xs-12" style="margin-top:10px">                                                    
+                                    <a class="services-icon"onclick="window.open('demografi-penduduk', '_blank');">
+                                        <i class="fa fa-users" style="color:lightgreen"></i>
+                                    </a> <?php $tot_penduduk = $desa->jumlah_laki + $desa->jumlah_perempuan; ?>
+                                    <p>Jumlah penduduk sebanyak<br><strong><?= $tot_penduduk; ?></strong> jiwa</p>                                                
+                                </div>                                    
+                            </div>                                                                                                         
+                        </div>                           
+                    </div>
+                    <br>
+                <?php endforeach; ?> 
               </div>
             </div>
         </div>
@@ -1083,62 +722,33 @@
                     </div>
                 </div>
                 <div class="row">
+                <?php 
+                    foreach($kegiatan as $post) :
+                        $create_at = date("d-M-Y", strtotime($post->created_at));
+                ?>
                       <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="single-blog">
                                 <div class="single-blog-img">
-                                    <a href="http://localhost/kecsirimau/articlesdetail/1/festival-teluk-ambon-kodam-pattimura-ajak-masyarakat-bersihkan-sampah-di-pantai-dan-laut3"><img src="<?=base_url()?>assets/images/articles/thumbs/festival-teluk-ambon.jpg" alt=""></a>
+                                    <a href="<?= site_url('/kegiatan/view/'.$post->slug) ?>">
+                                        <img src="<?= site_url('assets/images/articles/'.$post->post_image); ?>" alt="">
+                                    </a>
                                 </div>
                                 <div class="blog-meta">
                                     <span class="comments-type">
                                         <i class="fa fa-comment-o"></i>
                                         <a href="#">0 komentar</a>
                                     </span>
-                                    <span class="date-type"><i class="fa fa-calendar"></i>06-01-2019 22:01:57</span>
+                                    <span class="date-type"><i class="fa fa-calendar"></i><?= $create_at ?></span>
                                 </div>
                                 <div class="blog-text">
-                                    <h4><a href="http://localhost/kecsirimau/articlesdetail/1/festival-teluk-ambon-kodam-pattimura-ajak-masyarakat-bersihkan-sampah-di-pantai-dan-laut3">3. Festival Teluk Ambon, Kodam Pattimura Ajak Masyarakat Bersihkan Sampah di Pantai dan Laut</a></h4>
-                                    <p style="text-align:justify">AMBON, tniad.mil.id &ndash; Festival Teluk Ambon (FTA ) tahun 2018 merupakan persembahan masyarakat Maluku untuk memeriahkan HUT Republik Indonesia yang ke-73, sekaligus HUT Provinsi Maluku yang jatuh<a href="http://localhost/kecsirimau/articlesdetail/1/festival-teluk-ambon-kodam-pattimura-ajak-masyarakat-bersihkan-sampah-di-pantai-dan-laut3">...baca Selengkapnya</a></p>
+                                    <h4><a href="<?= site_url('/kegiatan/view/'.$post->slug) ?>"><?= $post->title?></a></h4>
+                                    <p style="text-align:justify"><?= word_limiter($post->body, 35) ?><a href="#">...baca Selengkapnya</a></p>
                                 </div>                                
                             </div>
                         </div>          
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-blog">
-                                <div class="single-blog-img">
-                                    <a href="http://localhost/kecsirimau/articlesdetail/1/festival-teluk-ambon-kodam-pattimura-ajak-masyarakat-bersihkan-sampah-di-pantai-dan-laut4"><img src="<?=base_url()?>assets/images/articles/thumbs/festival-teluk-ambon.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-meta">
-                                    <span class="comments-type">
-                                        <i class="fa fa-comment-o"></i>
-                                        <a href="#">0 komentar</a>
-                                    </span>
-                                    <span class="date-type"><i class="fa fa-calendar"></i>06-01-2019 22:01:57</span>
-                                </div>
-                                <div class="blog-text">
-                                    <h4><a href="http://localhost/kecsirimau/articlesdetail/1/festival-teluk-ambon-kodam-pattimura-ajak-masyarakat-bersihkan-sampah-di-pantai-dan-laut4">3. Festival Teluk Ambon, Kodam Pattimura Ajak Masyarakat Bersihkan Sampah di Pantai dan Laut</a></h4>
-                                    <p style="text-align:justify">AMBON, tniad.mil.id &ndash; Festival Teluk Ambon (FTA ) tahun 2018 merupakan persembahan masyarakat Maluku untuk memeriahkan HUT Republik Indonesia yang ke-73, sekaligus HUT Provinsi Maluku yang jatuh<a href="http://localhost/kecsirimau/articlesdetail/1/festival-teluk-ambon-kodam-pattimura-ajak-masyarakat-bersihkan-sampah-di-pantai-dan-laut4">...baca Selengkapnya</a></p>
-                                </div>                                
-                            </div>
-                        </div>          
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-blog">
-                                <div class="single-blog-img">
-                                    <a href="http://localhost/kecsirimau/articlesdetail/1/festival-teluk-ambon-kodam-pattimura-ajak-masyarakat-bersihkan-sampah-di-pantai-dan-laut5"><img src="<?=base_url()?>assets/images/articles/thumbs/festival-teluk-ambon.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-meta">
-                                    <span class="comments-type">
-                                        <i class="fa fa-comment-o"></i>
-                                        <a href="#">0 komentar</a>
-                                    </span>
-                                    <span class="date-type"><i class="fa fa-calendar"></i>06-01-2019 22:01:57</span>
-                                </div>
-                                <div class="blog-text">
-                                    <h4><a href="http://localhost/kecsirimau/articlesdetail/1/festival-teluk-ambon-kodam-pattimura-ajak-masyarakat-bersihkan-sampah-di-pantai-dan-laut5">5. Festival Teluk Ambon, Kodam Pattimura Ajak Masyarakat Bersihkan Sampah di Pantai dan Laut</a></h4>
-                                    <p style="text-align:justify">AMBON, tniad.mil.id &ndash; Festival Teluk Ambon (FTA ) tahun 2018 merupakan persembahan masyarakat Maluku untuk memeriahkan HUT Republik Indonesia yang ke-73, sekaligus HUT Provinsi Maluku yang jatuh<a href="http://localhost/kecsirimau/articlesdetail/1/festival-teluk-ambon-kodam-pattimura-ajak-masyarakat-bersihkan-sampah-di-pantai-dan-laut5">...baca Selengkapnya</a></p>
-                                </div>                                
-                            </div>
-                        </div>          
+                <?php endforeach; ?>     
                   <div class="single-blog">
-                        <center><span><a href="articles/1/0" class="ready-btn">Kegiatan Selengkapnya</a></span></center>
+                        <center><span><a href="<?php echo base_url();?>kegiatan/" class="ready-btn">Kegiatan Selengkapnya</a></span></center>
                     </div>
                 </div>
             </div>                <!-- End Right Blog-->
@@ -1156,64 +766,35 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-blog">
-                                <div class="single-blog-img">
-                                    <a href="http://localhost/kecsirimau/articlesdetail/2/dive-bluemotion-ambon-"><img src="<?=base_url()?>assets/images/articles/thumbs/Wisata-Hits-Dive-Bluemotion-Ambon-Maluku.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-meta">
-                                    <span class="comments-type">
-                                        <i class="fa fa-comment-o"></i>
-                                        <a href="#">0 komentar</a>
-                                    </span>
-                                    <span class="date-type"><i class="fa fa-calendar"></i>31-01-2019 15:01:58</span>
-                                </div>
-                                <div class="blog-text">
-                                    <h4><a href="http://localhost/kecsirimau/articlesdetail/2/dive-bluemotion-ambon-">Dive Bluemotion Ambon</a></h4>
-                                    <p style="text-align:justify">Lokasi: Laha, Teluk Ambon, Kota Ambon, Maluku.<a href="http://localhost/kecsirimau/articlesdetail/2/dive-bluemotion-ambon-">...baca Selengkapnya</a></p>
-                                </div>                                
+                <div class="row">			
+                <?php 
+                    foreach($potensi as $post) :
+                        $create_at = date("d-M-Y", strtotime($post->created_at));
+                ?>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="single-blog">
+                            <div class="single-blog-img">
+                                <a href="<?= site_url('/kegiatan/view/'.$post->slug) ?>">
+                                    <img src="<?= site_url('assets/images/articles/'.$post->post_image); ?>" alt="">
+                                </a>
                             </div>
-                        </div>          
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-blog">
-                                <div class="single-blog-img">
-                                    <a href="http://localhost/kecsirimau/articlesdetail/2/teluk-ambon-menjanjikan-sebagai-kawasan-perikanan"><img src="<?=base_url()?>assets/images/articles/thumbs/ambon-potensi-perikanan.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-meta">
-                                    <span class="comments-type">
-                                        <i class="fa fa-comment-o"></i>
-                                        <a href="#">0 komentar</a>
-                                    </span>
-                                    <span class="date-type"><i class="fa fa-calendar"></i>31-01-2019 15:01:43</span>
-                                </div>
-                                <div class="blog-text">
-                                    <h4><a href="http://localhost/kecsirimau/articlesdetail/2/teluk-ambon-menjanjikan-sebagai-kawasan-perikanan">Teluk Ambon Menjanjikan Sebagai Kawasan Perikanan</a></h4>
-                                    <p style="text-align:justify">Kepala Pusat Penelitian Laut Dalam - Lembaga Ilmu Pengetahuan Indonesia (PPLD-LIPI) Augy Syahailatua mengatakan Teluk Ambon menjanjikan sebagai kawasan perikanan budidaya, karena berhubungan langsung <a href="http://localhost/kecsirimau/articlesdetail/2/teluk-ambon-menjanjikan-sebagai-kawasan-perikanan">...baca Selengkapnya</a></p>
-                                </div>                                
+                            <div class="blog-meta">
+                                <span class="comments-type">
+                                    <i class="fa fa-comment-o"></i>
+                                    <a href="#">0 komentar</a>
+                                </span>
+                                <span class="date-type"><i class="fa fa-calendar"></i><?= $create_at ?></span>
                             </div>
-                        </div>          
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-blog">
-                                <div class="single-blog-img">
-                                    <a href="http://localhost/kecsirimau/articlesdetail/2/ambon-kota-musik-dunia"><img src="<?=base_url()?>assets/images/articles/thumbs/ambon-city-of-music.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-meta">
-                                    <span class="comments-type">
-                                        <i class="fa fa-comment-o"></i>
-                                        <a href="#">0 komentar</a>
-                                    </span>
-                                    <span class="date-type"><i class="fa fa-calendar"></i>31-01-2019 15:01:40</span>
-                                </div>
-                                <div class="blog-text">
-                                    <h4><a href="http://localhost/kecsirimau/articlesdetail/2/ambon-kota-musik-dunia">Ambon Kota Musik Dunia</a></h4>
-                                    <p style="text-align:justify">Saat ini kota Ambon sementara menyiapkan sumber daya dan infrstruktur guna mewujudkan Ambon sebagi kota musik dunia.<a href="http://localhost/kecsirimau/articlesdetail/2/ambon-kota-musik-dunia">...baca Selengkapnya</a></p>
-                                </div>                                
-                            </div>
-                        </div>          
-              </div>
+                            <div class="blog-text">
+                                <h4><a href="<?php echo site_url('/kegiatan/view/'.$post->slug); ?>"><?= $post->title; ?></a></h4>
+                                <p style="text-align:justify"><?= $post->body ?><a href="<?php echo site_url('/kegiatan/view/'.$post->slug); ?>">...baca Selengkapnya</a></p>
+                            </div>                                
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+                </div>
                 <div class="single-blog">
-                    <center><span><a href="articles/2/0" class="ready-btn">Potensi Selengkapnya</a></span></center>
+                        <center><span><a href="<?php echo base_url();?>kegiatan/index_potensi" class="ready-btn">Potensi Selengkapnya</a></span></center>
                 </div>                
             </div>                <!-- End Right Blog-->
         </div>
@@ -1430,73 +1011,4 @@
             </div>
         </div>
     </div>
-    <div class="footer-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="footer-content">
-                    <div class="footer-head">
-                        <div class="footer-logo">
-                            <h2><span>KECAMATAN</span><br>SIRIMAU</h2>
-                        </div>
-                        <p>Teluk Ambon, Kel Karang Panjang, Sirimau, Kota Ambon, Maluku</p>
-                        <div class="footer-icons">
-                        <ul>
-                            <li>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                            <a href="#"><i class="fa fa-google"></i></a>
-                            </li>
-                            <li>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </li>
-                        </ul>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <!-- end single footer -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="footer-content">
-                        <div class="footer-head">
-                            <h4 style="text-align:centerq">Penanganan, Pengaduan, Saran dan Masukan</h4>
-                            <ol>
-                                <li>Melalui Kotak Saran dan Pengaduan</li>
-                                <li>Melalui SMS Pelayanan PEMKOT Nomor 08114706999</li>
-                                <li>Melalui Questionaire Kepuasan pelayanan masyarakat</li>
-                                <li>Melalui Nomor HP Tim Penanganan Pengaduan</li>
-                            <ol>                                                      
-                        </div>
-                    </div>
-                </div>
-                <!-- end single footer -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="footer-content">
-                        <div class="footer-head">
-                            <h4>Link Terkait</h4>
-                            <div class="flicker-img">
-                                <table>
-                                    <tr>
-                                        <td><a href="http://malukuprov.go.id" target="_blank"><img src="assets/images/logo-maluku.png" alt=""></a></td>
-                                        <td><a href="http://ambon.go.id" target="_blank"><img src="assets/images/logo-ambon.png" alt=""></a></td>
-                                        <td><a href="http://bpprd.ambon.go.id/public" target="_blank"><img src="assets/images/logo-bpprd.jpg" alt=""></a></td>
-                                    </tr>
-                                    <tr>                                                                
-                                        <td><a href="http://dpmptsp.ambon.go.id/" target="_blank"><img src="assets/images/logo-dpmptsp.png" alt=""></a></td>                                                                                                                         
-                                        <td><a href="http://lapor.go.id" target="_blank"><img src="assets/images/link-lapor.png" alt=""></a></td>
-                                        <td><a href="http://dukcapil.kemendagri.go.id/" target="_blank"><img src="assets/images/link-ditjen-capil.png" alt=""></a></td>                                                                                
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-	</div>
-	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>  
     
