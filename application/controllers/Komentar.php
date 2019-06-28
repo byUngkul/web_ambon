@@ -14,11 +14,11 @@
 			if($this->form_validation->run() === FALSE){
         $this->load->view('_blocks/header');
         $this->load->view('_blocks/nav');
-				$this->load->view('posts/view', $data);
+				$this->load->view('kegiatan/view', $data);
 				$this->load->view('_blocks/footer');
 			} else {
 				$this->comment_m->create_comment($post_id);
-				redirect('kegiatan/'.$slug);
+				redirect('kegiatan/view/'.$slug);
 			}
 		}
 	}

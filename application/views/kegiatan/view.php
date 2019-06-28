@@ -19,18 +19,18 @@
                             <!-- recent start -->
                             <div class="left-blog">
                             <?php if(count($recent)>0) { ?> 
-                                     <h4><?=$recent[0]->category->name?> Sebelumnya</h4>
+                                     <h4> Sebelumnya</h4>
                                     <div class="recent-post">
                                         <!-- start single post -->
                                         <?php foreach($recent as $key) {?>  
                                             <div class="recent-single-post">
                                                 <div class="post-img">
-                                                    <a href="<?=$key->url?>">
-                                                        <img src="<?=$key->thumb_image_path?>" alt="">
+                                                    <a href="<?= site_url('/kegiatan/view/'.$key->slug) ?>">
+                                                        <img src="<?= site_url('assets/images/articles/'.$key->post_image) ?>" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="pst-content">
-                                                    <p><a href="<?=$key->url?>"><?=$key->title?></a></p>
+                                                    <p><a href="<?= site_url('/kegiatan/view/'.$key->slug) ?>"><?=$key->title?></a></p>
                                                 </div>
                                             </div>
                                         <?php } ?>                                  
@@ -54,11 +54,11 @@
                             <div class="post-information">
                                 <h2><?=$post['title']?></h2>
                                 <div class="entry-meta">
-                                    <span class="author-meta"><i class="fa fa-user"></i><?= $post['first_name'] ?></span>
+                                    <span class="author-meta"><i class="fa fa-user"></i><?= $post['name'] ?></span>
                                     <?php $date_added = date('d-M-Y',strtotime($post['created_at']))?>
                                     <span><i class="fa fa-clock-o"></i><?= $date_added ?></span>                                    
                                     <span><i class="fa fa-comments-o"></i>0 komentar</span>
-                                    <span><i class="fa fa-map-marker"></i>nama desa</span>
+                                    <span><i class="fa fa-map-marker"></i><?= $post['nama']; ?></span>
                                 </div>
                                     <div class="entry-content">
                                         <?=$post['body']?>
@@ -74,19 +74,25 @@
                                     <div class="comments-list">
                                         <ul>
                                             <li class="threaded-comments">
-                                                <div class="comments-details">
-                                                    <div class="comments-list-img">
-                                                        <img src="img/blog/b02.jpg" alt="post-author">
-                                                    </div>
-                                                    <div class="comments-content-wrap">
-                                                            <span>
-                                                                <b><a href="#">demo</a></b>
-                                                                    Post author
-                                                                    <span class="post-time">October 6, 2014 at 4:25 pm</span>                                                        
-                                                            </span>
-                                                            <p>Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur</p>
-                                                    </div>
-                                                </div>
+                                                <?php if($comments): ?>
+                                                    <?php foreach($comments as $comment): ?>
+                                                        <div class="comments-details">
+                                                            <div class="comments-list-img">
+                                                                <img src="img/blog/b02.jpg" alt="post-author">
+                                                            </div>
+                                                            <div class="comments-content-wrap">
+                                                                    <span>
+                                                                        <b><a href="#"><?= $comment['name'] ?></a></b>
+                                                                            Post author
+                                                                            <span class="post-time"><?= $comment['created_at'] ?></span>                                                        
+                                                                    </span>
+                                                                    <p><?= $comment['body'] ?></p>
+                                                            </div>
+                                                        </div>
+                                                    <?php endforeach; ?>
+                                                <?php else : ?>
+                                                    <p>No Comments To Display</p>
+                                                <?php endif; ?>
                                             </li>																					                                        
                                         </ul>
                                     </div>
@@ -103,12 +109,12 @@
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                 <p>Email *</p>
-                                                <input type="email">
+                                                <input type="email" name="email">
                                             </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                 <p>Website</p>
                                                 <input type="text">
-                                            </div>
+                                            </div> -->
                                             <div class="col-lg-12 col-md-12 col-sm-12 comment-form-comment">
                                                 <p>Komentar</p>
                                                     <textarea id="message-box" name="body" cols="30" rows="10"></textarea>

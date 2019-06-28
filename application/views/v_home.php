@@ -814,97 +814,24 @@
             <!-- Start Portfolio -page -->                
                 <div class="awesome-project-content">
                 <!-- single-awesome-project start -->
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-awesome-project">
-                                <div class="awesome-img">
-                                    <a href="#"><img src="<?=base_url()?>assets/images/galleri/thumbs/tari.jpg" alt="" /></a>
-                                    <div class="add-actions text-center">
-                                        <div class="project-dec">
-                                            <a class="venobox" data-gall="myGallery" href="../assets/images/galleri/thumbs/tari.jpg">
-                                                <h4>Budaya dan Wisata</h4>
-                                                <span>Ragam Tari Kreasi Dilombakan pada Pesta Teluk Ambon</span>
-                                            </a>
-                                        </div>
+                <?php foreach($gallery as $row): ?>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="single-awesome-project">
+                            <div class="awesome-img">
+                                <a href="<?= site_url('assets/images/galleri/'.$row->image) ?>"><img src="<?= site_url('assets/images/galleri/'.$row->image) ?>" alt="" /></a>
+                                <div class="add-actions text-center">
+                                    <div class="project-dec">
+                                        <a class="venobox" data-gall="myGallery" href="<?= site_url('assets/images/galleri/'.$row->image) ?>">
+                                            <h4><?= $row->nama ?></h4>
+                                            <span><?= $row->keterangan ?></span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>                    
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-awesome-project">
-                                <div class="awesome-img">
-                                    <a href="#"><img src="<?=base_url()?>assets/images/galleri/thumbs/tari.jpg" alt="" /></a>
-                                    <div class="add-actions text-center">
-                                        <div class="project-dec">
-                                            <a class="venobox" data-gall="myGallery" href="../assets/images/galleri/thumbs/tari.jpg">
-                                                <h4>Budaya dan Wisata</h4>
-                                                <span>Ragam Tari Kreasi Dilombakan pada Pesta Teluk Ambon</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                    
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-awesome-project">
-                                <div class="awesome-img">
-                                    <a href="#"><img src="<?=base_url()?>assets/images/galleri/thumbs/tari.jpg" alt="" /></a>
-                                    <div class="add-actions text-center">
-                                        <div class="project-dec">
-                                            <a class="venobox" data-gall="myGallery" href="../assets/images/galleri/thumbs/tari.jpg">
-                                                <h4>Budaya dan Wisata</h4>
-                                                <span>Ragam Tari Kreasi Dilombakan pada Pesta Teluk Ambon</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                    
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-awesome-project">
-                                <div class="awesome-img">
-                                    <a href="#"><img src="<?=base_url()?>assets/images/galleri/thumbs/Pembukaan_Festival_Teluk_Ambon_oleh_Gubernur_Maluku.jpg" alt="" /></a>
-                                    <div class="add-actions text-center">
-                                        <div class="project-dec">
-                                            <a class="venobox" data-gall="myGallery" href="../assets/images/galleri/thumbs/Pembukaan_Festival_Teluk_Ambon_oleh_Gubernur_Maluku.jpg">
-                                                <h4>Festival Teluk Ambon</h4>
-                                                <span>Pembukaan Festival Teluk Ambon oleh Gubernur Maluku</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                    
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-awesome-project">
-                                <div class="awesome-img">
-                                    <a href="#"><img src="<?=base_url()?>assets/images/galleri/thumbs/Pembukaan_Festival_Teluk_Ambon_oleh_Gubernur_Maluku.jpg" alt="" /></a>
-                                    <div class="add-actions text-center">
-                                        <div class="project-dec">
-                                            <a class="venobox" data-gall="myGallery" href="../assets/images/galleri/thumbs/Pembukaan_Festival_Teluk_Ambon_oleh_Gubernur_Maluku.jpg">
-                                                <h4>Festival Teluk Ambon</h4>
-                                                <span>Pembukaan Festival Teluk Ambon oleh Gubernur Maluku</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                    
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-awesome-project">
-                                <div class="awesome-img">
-                                    <a href="#"><img src="<?=base_url()?>assets/images/galleri/thumbs/Pembukaan_Festival_Teluk_Ambon_oleh_Gubernur_Maluku.jpg" alt="" /></a>
-                                    <div class="add-actions text-center">
-                                        <div class="project-dec">
-                                            <a class="venobox" data-gall="myGallery" href="../assets/images/galleri/thumbs/Pembukaan_Festival_Teluk_Ambon_oleh_Gubernur_Maluku.jpg">
-                                                <h4>Festival Teluk Ambon</h4>
-                                                <span>Pembukaan Festival Teluk Ambon oleh Gubernur Maluku</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                    
-              </div>                
+                        </div>
+                    </div>                              
+                <?php endforeach; ?>    
+                </div>                
                 <div class="single-blog">
                     <center><span><a href="gallery" class="ready-btn">Gallery Selengkapnya</a></span></center>
                 </div>            
@@ -931,7 +858,7 @@
                             <div class="single-icon">
                                 <i class="fa fa-mobile"></i>
                                 <p>
-                                    Telepon :  (0911) 254836<br>
+                                    Telepon : <?= $kecamatan->telp ?> / <?= $kecamatan->telp2 ?><br>
                                     <span>Senin s/d Jumat 08.00 - 15.00 WITA.</span>
                                 </p>
                             </div>
@@ -943,8 +870,7 @@
                             <div class="single-icon">
                                 <i class="fa fa-envelope-o"></i>
                                 <p>
-                                    Email : <a href="mailto:kectelukambon@ambon.go.id" target="_top">kectelukambon@ambon.go.id</a><br>
-                                    <span><a href="http://kectelukambon.ambon.go.id">kectelukambon.ambon.go.id</a></span>
+                                    Email : <a href="mailto:<?= $kecamatan->email ?>" target="_top"><?= $kecamatan->email ?></a><br>
                                 </p>
                             </div>
                         </div>
@@ -955,8 +881,8 @@
                             <div class="single-icon">
                                 <i class="fa fa-map-marker"></i>
                                 <p>
-                                    Lokasi Kantor: Jl. Rijali<br>
-                                    <span>Kota Ambon</span>
+                                    Lokasi Kantor: <br>
+                                    <span><?= $kecamatan->alamat_kantor ?></span>
                                 </p>
                             </div>
                         </div>

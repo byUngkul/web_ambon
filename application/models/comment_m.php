@@ -8,7 +8,7 @@ class Comment_m extends CI_Model
       'email' => $this->input->post('email'),
       'body' => $this->input->post('body')
     );
-
+    // var_dump($data);
     return $this->db->insert('comments', $data);
   }
 

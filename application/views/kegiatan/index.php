@@ -19,13 +19,11 @@
                             <div class="left-blog">
                                 <h4><a href="#">Desa/Negeri/Kelurahan</a></h4>
                                 <ul>
-                                
-                                    <li>
-                                      <a href="#">Desa A</a>
-                                      <a href="#">Desa B</a>
-                                      <a href="#">Desa C</a>
+                                <?php foreach($desas as $desa) : ?>
+                                    <li>                                    
+                                      <a href="#"><?= $desa->nama ?></a>
                                     </li>
-                                
+                                <?php endforeach; ?>
                                 </ul>
                             </div>
                         </div>                        
@@ -54,7 +52,7 @@
                                         </a>
                                     </div>
                                     <div class="blog-meta">
-                                        <span class="author-meta"><i class="fa fa-user"></i><?= $p['first_name']?></span>                                
+                                        <span class="author-meta"><i class="fa fa-user"></i><?= $p['name']?></span>                                
                                         <span class="comments-type"><i class="fa fa-comment-o"></i> 0 comments</span>
                                         <span class="date-type"><i class="fa fa-calendar"></i><?= $create_at ?></span>
                                     </div>
