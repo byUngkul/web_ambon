@@ -26,7 +26,8 @@ class Pegawai_m extends CI_Model {
         "urutan" => $this->input->post('urutan'),
         "telepon" => $this->input->post('telp'),
         "email" => $this->input->post('email'),
-        "image" => $this->_uploadImage()
+        "image" => $this->_uploadImage(),
+        "id_desa" => $this->input->post('id_pem')
     );
 
     $result = $this->db->insert('pegawai', $data);
@@ -53,7 +54,8 @@ class Pegawai_m extends CI_Model {
         // "urutan" => $this->input->post('urutan'),
         "telepon" => $this->input->post('telp'),
         "email" => $this->input->post('email'),
-        "image" => $post_image
+        "image" => $image,
+        "id_desa" => $this->input->post('id_pem')
     );
 
     $this->db->where('id', $this->input->post('id'));
@@ -61,10 +63,16 @@ class Pegawai_m extends CI_Model {
     return $result;
   }
 
+  public function delete($id) {
+    $this->db->where($id);
+    $result = $this->db->delete('pegawai');
+    return $result;
+  }
+
   private function _uploadImage() {
     $config['upload_path']          = './assets/images/pegawai/';
     $config['allowed_types']        = 'gif|jpg|png';
-    $config['file_name']            = url_title($this->input->post('title'));
+    $config['file_name']            = url_title($this->input->post('nama'));
     $config['overwrite']			      = true;
     $config['max_size']             = 1024; 
     // $config['max_width']            = 1024;

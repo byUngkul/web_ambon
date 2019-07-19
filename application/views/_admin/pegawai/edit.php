@@ -19,6 +19,17 @@
         <label>Nip *</label>
         <input type="text" name="nip" class="form-control form-control-sm col-md-4" value="<?= $pegawai->nip ?>">
       </div>
+
+      <div class="form-group">
+        <label>Pemerintahan</label>
+        <select name="id_pem" id="id_pem" class="form-control form-control-sm col-md-4">
+          <option value="">Pilih</option>
+          <?php foreach($desa as $val): ?>
+            
+            <option value="<?= $val->desa_id ?>" <?php if($pegawai->id_desa == $val->desa_id) {echo "selected";} ?>><?= $val->nama ?></option>
+          <?php endforeach; ?>
+        </select>
+      </div>
       
       <div class="row">
        <div class="col-md-2">

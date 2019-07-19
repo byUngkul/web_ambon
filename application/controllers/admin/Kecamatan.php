@@ -13,7 +13,7 @@ class Kecamatan extends CI_Controller {
   }
   
   public function index() {
-    $profile = $this->kecamatan_m->get_data();
+    $profile = $this->desas_m->get_desa(null, 'yes');
     
     $data = array(
       'menu' => '5',

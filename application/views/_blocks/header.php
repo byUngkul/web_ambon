@@ -2,7 +2,7 @@
 <html lang="id-ID">
 	<head>
 		<meta charset="utf-8">
-		<title>Kecamatan Sirimau - Beranda</title>
+		<title><?= $kecamatan->nama?> - Beranda</title>
 		<meta name="keywords" content="Kecamatan Sirimau">
 		<meta name="description" content="Situs Resmi Kecamatan Sirimau">
 		<meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -19,5 +19,20 @@
 		<link href="<?= base_url().'assets/css/nivo-slider-theme.css?c='?>" media="all" rel="stylesheet"/>
 		<link href="<?= base_url().'assets/css/style.css?c='?>" media="all" rel="stylesheet"/>
 		<link href="<?= base_url().'assets/css/responsive.css?c='?>" media="all" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css">
+		<link href="<?= base_url()?>assets/css/jquery.orgchart.css" media="all" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+			#orgChart{
+					width: auto;
+					height: auto;
+			}
+
+			#orgChartContainer{
+					width: 1000px;
+					height: 450px;
+					overflow: auto;
+					background: #eeeeee;
+			}
+    </style>
 	</head>        
 	<body data-spy="scroll" data-target="#navbar-example">

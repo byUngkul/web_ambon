@@ -28,10 +28,10 @@ class Kegiatan extends CI_Controller {
 
 		$data['title'] = "Kegiatan";
 		$data['desas'] = $this->desas_m->get_all_desas();
-		$data['kecamatan'] = $this->kecamatan_m->get_data();
+		$data['kecamatan'] = $this->desas_m->get_desa(null, 'yes');
 
-		$this->load->view('_blocks/header');
-		$this->load->view('_blocks/nav_post');
+		$this->load->view('_blocks/header', $data);
+		$this->load->view('_blocks/nav_post', $data);
 		$this->load->view('kegiatan/index', $data);
 		$this->load->view('_blocks/footer');
 	}
@@ -71,7 +71,7 @@ class Kegiatan extends CI_Controller {
 		$desa_id = $data['post']['desa_id'];
 		// var_dump($post_id);
 		$data['comments'] = $this->comment_m->get_comments($post_id);
-		$data['kecamatan'] = $this->kecamatan_m->get_data();
+		$data['kecamatan'] = $this->desas_m->get_desa(null, 'yes');
 		$data['recent'] = $this->article_m->get_posts_single(NULL, $desa_id);
 
 		if(empty($data['post'])){
@@ -83,8 +83,8 @@ class Kegiatan extends CI_Controller {
 		// var_dump($p);
 		$data['title'] = $data['post']['title'];
 
-		$this->load->view('_blocks/header');
-		$this->load->view('_blocks/nav_post');
+		$this->load->view('_blocks/header', $data);
+		$this->load->view('_blocks/nav_post', $data);
 		$this->load->view('kegiatan/view', $data);
 		$this->load->view('_blocks/footer');
 	}

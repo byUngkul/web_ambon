@@ -1,13 +1,34 @@
 <?php
 class Desas_m extends CI_Model {
 
-  public function get_all_desas() {
+  public function get_all_desas($where = NULL) 
+  {
+    if (!empty($where)) {
+      $this->db->where('is_parent_site', $where);
+    }
     $query = $this->db->get('desa');
     return $query->result();
   }
 
-  public function get_desa($id) {
-    $query = $this->db->get_where('desa', array('desa_id' => $id));
+  public function get_once($slug = null)
+  {
+    if (!empty($slug)) {
+      $this->db->where('slug', $slug);
+    }
+    $query = $this->db->get('desa');
+    return $query; 
+  }
+
+  public function get_desa($id = null, $is_parent = null) {
+    if (!empty($is_parent)){
+      $this->db->where('is_parent_site', $is_parent);
+    }
+
+    if (!empty($id)) {
+      $this->db->where('desa_id', $id);
+    }
+    
+    $query = $this->db->get('desa');
     return $query->row();
   }
 

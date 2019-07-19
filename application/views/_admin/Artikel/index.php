@@ -1,14 +1,14 @@
 <div class="card mb-3">
   <div class="card-header">
-    <i class="fas fa-file-alt"></i>
+    <i class="fas fa-file-alt fa-lg"></i>
     <?= $title ?>
     <a href="<?= site_url('admin/artikel/add')?>" class="btn btn-primary btn-sm float-right"><span><i class="fas fa-plus"></i></span> Tambah</a>
   </div>
   
   <div class="card-body">
     <div class="table-responsive">
-      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-        <thead>
+      <table class="table table-hover table-sm" id="dataTable" width="100%" cellspacing="0">
+        <thead class="thead-light">
           <tr>
             <th>Title</th>
             <th>Category</th>

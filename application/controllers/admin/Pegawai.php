@@ -12,9 +12,10 @@ class Pegawai extends CI_Controller {
      $this->load->library('form_validation');
   }
 
-  public function index() {
+  public function index()
+  {
     $pegawai = $this->pegawai_m->get_all_pegawai();
-    $kecamat = $this->kecamatan_m->get_data();
+    $kecamat = $this->desas_m->get_desa(null, 'yes');
 
     $data = array(
       'menu' => '7',
@@ -28,12 +29,15 @@ class Pegawai extends CI_Controller {
     $this->load->view('_admin/main', $data);
   }
 
-  public function add() {
-    $kecamat = $this->kecamatan_m->get_data();
+  public function add()
+  {
+    $kecamat = $this->desas_m->get_desa(null, 'yes');
+    $desa = $this->desas_m->get_all_desas();
 
     $data = array(
       'menu' => '7',
       'kecamatan' => $kecamat,
+      'desa' => $desa,
       'title' => 'Pegawai: tambah',
       'page' => 'Tambah Pegawai',
       'content' => '_admin/pegawai/add',
@@ -56,13 +60,16 @@ class Pegawai extends CI_Controller {
     }
   }
 
-  public function edit($id) {
-    $kecamat = $this->kecamatan_m->get_data();
+  public function edit($id)
+  {
+    $kecamat = $this->desas_m->get_desa(null, 'yes');
     $pegawai = $this->pegawai_m->get_pegawai($id);
+    $desa = $this->desas_m->get_all_desas();
 
     $data = array(
       'menu' => '7',
       'kecamatan' => $kecamat,
+      'desa' => $desa,
       'title' => 'Pegawai: edit',
       'page' => 'Edit Pegawai',
       'content' => '_admin/pegawai/edit',
@@ -72,9 +79,17 @@ class Pegawai extends CI_Controller {
     $this->load->view('_admin/main', $data);
   }
 
-  public function update() {
+  public function update()
+  {
     $this->pegawai_m->update();
     $this->session->set_flashdata('post_update', 'Berhasil update artikel');
+
+    redirect('admin/pegawai');
+  }
+
+  public function delete($id) 
+  {
+    $this->pegawai_m->delete($id);
 
     redirect('admin/pegawai');
   }

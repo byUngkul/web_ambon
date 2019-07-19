@@ -14,7 +14,7 @@ class Artikel extends CI_Controller {
 
   public function index() {
     $artikel = $this->article_m->get_all_posts();
-    $kecamat = $this->kecamatan_m->get_data();
+    $kecamat = $this->desas_m->get_desa(null, 'yes');
     // var_dump($artikel);
     $data = array(
       'menu' => '2',
@@ -31,7 +31,7 @@ class Artikel extends CI_Controller {
   public function add() {
     $categ = $this->category_m->list_category();
     $desas = $this->desas_m->get_all_desas();
-    $kecamat = $this->kecamatan_m->get_data();
+    $kecamat = $this->desas_m->get_desa(null, 'yes');
 
     $data = array(
       'menu' => '2',
@@ -64,7 +64,7 @@ class Artikel extends CI_Controller {
     $categ = $this->category_m->list_category();
     $desas = $this->desas_m->get_all_desas();
     $artikel = $this->article_m->get_post_edit($id);
-    $kecamat = $this->kecamatan_m->get_data();
+    $kecamat = $this->desas_m->get_desa(null, 'yes');
 
     // var_dump($artikel);
 

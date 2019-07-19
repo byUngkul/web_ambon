@@ -12,14 +12,14 @@ class Article_m extends CI_Model {
     }
 
     if($slug === TRUE) {
-      $this->db->select('posts.*, users.user_id, users.name, desa.*');
+      $this->db->select('posts.*, users.user_id, users.name, desa.desa_id, desa.nama as nama_desa, desa.slug as slug_ds');
     }
     
     $this->db->join('users', 'users.user_id = posts.user_id');
     $this->db->join('desa', 'desa.desa_id = posts.desa_id');
     
     if($slug === FALSE){
-      $this->db->select('posts.*, users.user_id, users.name, desa.*, categories.id, categories.name as cat_name');
+      $this->db->select('posts.*, users.user_id, users.name, desa.desa_id, desa.nama as nama_desa, desa.slug as slug_ds, categories.id, categories.name as cat_name');
       $this->db->order_by('posts.created_at', 'desc');
       $this->db->join('categories', 'categories.id = posts.category_id');
       $this->db->where('posts.published', 'yes');
@@ -28,13 +28,13 @@ class Article_m extends CI_Model {
       return $query->result_array();
     }
 
-    $query = $this->db->get_where('posts', array('slug' => $slug));
+    $query = $this->db->get_where('posts', array('posts.slug' => $slug));
     return $query->row_array();    
   }
 
   public function get_posts_single($category_id = NULL, $desa_id = NULL)
   {
-    $this->db->select('posts.*, desa.desa_id, desa.nama as nama_desa');
+    $this->db->select('posts.*, desa.desa_id, desa.nama as nama_desa, desa.slug as slug_ds');
     $this->db->order_by('posts.id', 'DESC');
     $this->db->join('categories', 'categories.id = posts.category_id');
     $this->db->join('desa', 'desa.desa_id = posts.desa_id');
@@ -50,6 +50,8 @@ class Article_m extends CI_Model {
     $query = $this->db->get('posts');
     return $query->result();
   }
+
+  
 
   public function get_post_edit($id = null)
   {

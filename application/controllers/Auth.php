@@ -11,8 +11,9 @@ class Auth extends CI_Controller {
 
 	public function login()
 	{
+		$data['kecamatan'] = 'Sirimau'; 
 		check_login();
-		$this->load->view('login');
+		$this->load->view('login', $data);
 	}
 
 	public function login_prosess()

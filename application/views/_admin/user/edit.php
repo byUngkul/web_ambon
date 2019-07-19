@@ -1,3 +1,6 @@
+<?php
+$desa_id = $this->session->userdata('desaid');
+?>
 <div class="card mb-3">
   <div class="card-header">
     <i class="fas fa-file-alt"></i>
@@ -58,13 +61,14 @@
         </div>        
       </div>
 
-      <div class="form-group" id="form-desa">
+      <div class="form-group" id="form">
         <label>Kelurahan/Negeri</label>
-        <select name="desa" id="desa" class="form-control form-control-sm col-md-4">
+        <select name="desa" id="desa" class="form-control form-control-sm col-md-4" readonly>
           <option value="">Pilih</option>
           <?php foreach($desas as $desa): ?>
           <option value="<?= $desa->desa_id ?>" <?php if($user->desa_id == $desa->desa_id) {echo "selected";} ?> ><?= $desa->nama ?></option>
           <?php endforeach; ?>
+          
         </select>
       </div>
       

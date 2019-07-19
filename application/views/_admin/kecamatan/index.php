@@ -24,14 +24,19 @@
             <input type="text" name="telp" value="<?= $profile->telp ?>" class="form-control form-control-sm">
           </div>
         </div>
-          
+
         <div class="col-md-4">
           <div class="form-group form-group-sm">
-            <label>e-mail</label>
-            <input type="text" name="email" value="<?= $profile->email ?>" class="form-control form-control-sm">
+            <label>Telp 2</label>
+            <input type="text" name="telp2" value="<?= $profile->telp2 ?>" class="form-control form-control-sm">
           </div>
-        </div>
+        </div>       
       </div>
+
+      <div class="form-group form-group-sm">
+        <label>e-mail</label>
+        <input type="text" name="email" value="<?= $profile->email ?>" class="form-control form-control-sm col-md-4">
+      </div>     
 
       <div class="row">
         <div class="col-md-4">
@@ -44,7 +49,7 @@
         <div class="col-md-4">
           <div class="form-group">
             <label>Logo sekarang</label><br><br>
-            <img src="<?= site_url('assets/images/'.$profile->logo) ?>" alt="" style="max-width: 200px; height: auto;">
+            <img src="<?= site_url('assets/images/'.$profile->logo) ?>" class="img-fluid img-thumbnail" alt="" style="max-width: 200px; height: auto;">
           </div>
         </div>
       </div>

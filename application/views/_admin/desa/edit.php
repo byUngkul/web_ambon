@@ -26,15 +26,7 @@
         <textarea name="profile" id="profile" class="form-control form-control-sm col-md-4" cols="10" rows="10"><?= $desa->profil ?></textarea>
       </div>
 
-      <div class="form-group form-group-sm">
-        <label>Jumlah Penduduk Laki-laki</label>
-        <input type="number" name="laki" value="<?= $desa->jumlah_laki ?>" class="form-control col-md-2">
-      </div>
-
-      <div class="form-group form-group-sm">
-        <label>Jumlah Penduduk Perempuan</label>
-        <input type="number" name="perempuan" value="<?= $desa->jumlah_perempuan ?>" class="form-control col-md-2">
-      </div>
+      
 
       <div class="form-group form-group-sm">
         <label>Url</label>

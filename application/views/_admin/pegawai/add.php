@@ -19,6 +19,16 @@
         <input type="text" name="nip" class="form-control form-control-sm col-md-4">
       </div>
       
+      <div class="form-group">
+        <label>Pemerintahan</label>
+        <select name="id_pem" id="id_pem" class="form-control form-control-sm col-md-4">
+          <!-- <option value="">Pilih</option> -->
+          <?php foreach($desa as $val): ?>
+            <option value="<?= $val->desa_id ?>"><?= $val->nama ?></option>
+          <?php endforeach; ?>
+        </select>
+      </div>
+      
       <div class="row">
        <div class="col-md-2">
           <div class="form-group form-group-sm">

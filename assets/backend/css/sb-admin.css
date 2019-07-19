@@ -218,11 +218,20 @@ table {
 }
 
 caption {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  color: #6c757d;
+  /* position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem; */
+  padding-top: 0.20rem;
+  padding-bottom: 0.02rem;
+  padding-left: 1rem;
+  color: #f5f6ee;
+  background-color:#66cc99;
   text-align: left;
-  caption-side: bottom;
+  caption-side: initial;
+  border: 1px solid transparent;
+  border-radius: 0.20rem;
 }
 
 th {
@@ -2566,7 +2575,7 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #f0faea;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -2593,7 +2602,7 @@ textarea.form-control {
 }
 
 .btn:hover {
-  color: #212529;
+  color: #0a4075;
   text-decoration: none;
 }
 
@@ -5452,7 +5461,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 .alert {
   position: relative;
   padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }

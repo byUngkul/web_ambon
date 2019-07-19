@@ -1,13 +1,13 @@
 <div class="card mb-3">
   <div class="card-header">
-    <i class="fas fa-file-alt"></i>
+    <i class="fas fa-file-alt fa-lg"></i>
     Kategori List
     <a href="<?= site_url('admin/kategori/add') ?>" class="btn btn-primary btn-sm float-right"><span><i class="fas fa-plus"></i></span> Tambah</a>
   </div>
   
   <div class="card-body">
     <div class="table-responsive">
-      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+      <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
             <th style="width: 85px">#</th>

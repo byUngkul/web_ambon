@@ -9,6 +9,7 @@ application/logs/*
 !application/*/.htaccess
 
 composer.lock
+web_ambon.zip
 
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
@@ -29,3 +30,6 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 /tests/tests/
 /tests/results/
+
+## file buat dikirim
+web_ambon.zip

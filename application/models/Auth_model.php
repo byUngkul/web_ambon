@@ -26,7 +26,7 @@ class Auth_model extends CI_Model{
          'name' => $post['nama'],
          'active' => $post['active'],
          'level' => $post['level'],
-         'desa_id' => $post['desa'] != "" ? $post['desa'] : null
+         'desa_id' => $post['desa'] == "" ? $post['desa'] : null
       );
       
       return $this->db->insert('users', $data);

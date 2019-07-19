@@ -8,15 +8,16 @@ class Users extends CI_Controller{
      // apa sdah login
      check_not_login();
      // cek apakah yang login itu admin
-     check_admin();
+   //   check_admin();
      $this->load->model('auth_model');
      $this->load->library('form_validation');
   }
   
   public function index()
   {
+      check_admin();
      $user = $this->auth_model->get();
-     $kecamat = $this->kecamatan_m->get_data();
+     $kecamat = $this->desas_m->get_desa(null, 'yes');
 
      $data = array(
       'menu' => '8',
@@ -33,7 +34,7 @@ class Users extends CI_Controller{
   public function add()
   {
     $user = $this->auth_model->get();
-    $kecamat = $this->kecamatan_m->get_data();
+    $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_all_desas();
 
      $data = array(
@@ -94,7 +95,7 @@ class Users extends CI_Controller{
      $this->form_validation->set_error_delimiters('<span class="help-block">', '</span>');
 
      $user = $this->auth_model->get($id)->row();
-     $kecamat = $this->kecamatan_m->get_data();
+     $kecamat = $this->desas_m->get_desa(null, 'yes');
      $desa = $this->desas_m->get_all_desas();
 
      $data = array(

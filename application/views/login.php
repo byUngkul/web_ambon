@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin - Login</title>
+  <title>Login</title>
 
   <!-- Custom fonts for this template-->
   <link href="<?= base_url() ?>assets/backend/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -17,13 +17,29 @@
   <!-- Custom styles for this template-->
   <link href="<?= base_url() ?>assets/backend/css/sb-admin.css" rel="stylesheet">
 
+  <style>
+    .login-title {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+      font-size: 15vw;
+      color: azure;
+    }
+  </style>
+
 </head>
 
 <body class="bg-dark">
   &nbsp;
   <div class="container">
+    <div class="row">
+      <div class="mx-auto mt-5">
+        <div class="login-title">
+          <h3 class="font-weight-bold">Kecamatan <?= $kecamatan ?> - Administrator</h3>
+        </div>          
+      </div>
+    </div>
     &nbsp;
-    <div class="card card-login mx-auto mt-5">
+    <div class="card card-login mx-auto mt-2">
       <div class="card-header">Login</div>
       <div class="card-body">
         <form action="<?= site_url('auth/login_prosess') ?>" method="post">

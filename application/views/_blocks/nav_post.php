@@ -17,7 +17,7 @@
                             <!-- Brand -->
                             <img src="<?=base_url()?>assets/images/logo-ambon.png" width="60px" style="float:left;margin-top:5px">
                             <a class="navbar-brand page-scroll sticky-logo" href="<?= site_url()?>">                                    
-                                <h1><span>Kecamatan</span> Sirimau</h1>
+                                <h1><span><?=  $kecamatan->nama ?></span> </h1>
                             </a>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->

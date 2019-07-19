@@ -14,14 +14,14 @@ class Main extends CI_Controller {
   
   public function index()
   {
-    $kecamat = $this->kecamatan_m->get_data();
+    $kecamat = $this->desas_m->get_desa(null, 'yes');
 
     $data['kecamatan'] = $kecamat;
     $data['title'] = 'Dashboard';
     $data['page'] = '';
     $data['content'] = '_admin/content';
     $data['menu'] = '1';
-
+    // var_dump($this->session->userdata());
     $this->load->view('_admin/main', $data);
   }
 }

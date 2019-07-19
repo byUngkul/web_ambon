@@ -3,9 +3,9 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+          <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-exclamation-circle fa-lg" style="color: #ff6b6b;"></i> &nbsp;Logout</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
+            <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
