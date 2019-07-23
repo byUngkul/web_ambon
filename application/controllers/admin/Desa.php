@@ -13,6 +13,7 @@ class Desa extends CI_Controller {
   }
   
   public function index() {
+    check_permission();
     $desa = $this->desas_m->get_all_desas();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     // var_dump($artikel);
@@ -29,6 +30,7 @@ class Desa extends CI_Controller {
   }
 
   public function add() {
+    check_permission();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
 
     $data = array(
@@ -57,6 +59,7 @@ class Desa extends CI_Controller {
   }
 
   public function edit($id) {
+    check_permission();
     $desa = $this->desas_m->get_desa($id);
     $kecamat = $this->desas_m->get_desa(null, 'yes');
 
@@ -81,6 +84,7 @@ class Desa extends CI_Controller {
   }
 
   public function delete($id) {
+    check_permission();
     $this->desas_m->delete($id);
 
     redirect('admin/desa');

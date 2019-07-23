@@ -26,3 +26,29 @@ function check_admin(){
      redirect('admin/main');
   }
 }
+
+// cek permission user
+function check_permission()
+{
+  $ci =& get_instance();
+  $path[1] = $ci->uri->segment(1);
+  $path[2] = $ci->uri->segment(2);
+  $path[3] = $ci->uri->segment(3);
+  $data = $ci->menu->allow($ci->session->userdata('userid'));
+  
+  if($path[3] == NULL){
+    $url = $path[1].'/'.$path[2];
+  } else {
+    $url = $path[1].'/'.$path[2].'/'.$path[3];
+  }  
+    
+  foreach ($data->result_array() as $val) {
+      $link[] = $val['link_resource'];
+  }
+
+  $allow = in_array($url, $link);
+    
+  if(!$allow) {
+    exit("Anda tidak memiliki hak akses!");
+  }
+}

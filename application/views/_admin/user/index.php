@@ -13,7 +13,7 @@
             <th style="width: 30px">#</th>
             <th>Nama</th>
             <th>Username</th>
-            <th style="width: 100px"></th>
+            <th style="width: 200px"></th>
           </tr>
         </thead>
                 
@@ -31,6 +31,7 @@
               <button class="btn btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#Delete<?= $row->user_id ?>">
                 <i class="fas fa-trash-alt"></i>
               </button>
+              <a href="<?= site_url('admin/users/privilege/'.$row->user_id) ?>" class="btn btn-info btn-sm"><i class="fas fa-key"></i>&nbsp;|&nbsp;Privilege</a>
             </td>
           </tr>
         <?php endforeach; ?>

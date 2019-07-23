@@ -10,6 +10,7 @@ class Organisasi extends CI_Controller{
 
   public function index()
   {
+    check_permission();
     if($this->session->userdata('level') != 1){
       redirect('admin/main');
     }
@@ -30,6 +31,7 @@ class Organisasi extends CI_Controller{
 
   public function add_item()
   {
+    check_permission();
     $post = $this->input->post();
     $this->organisasi_m->add_item($post);
 
@@ -38,6 +40,7 @@ class Organisasi extends CI_Controller{
 
   public function edit_item()
   {
+    check_permission();
     $post = $this->input->post();
     $this->organisasi_m->update_item($post);
 
@@ -46,6 +49,7 @@ class Organisasi extends CI_Controller{
 
   public function delete_item($id)
   {
+    check_permission();
     $this->db->delete('organisasi', array('id'=>$id));
     
     redirect('admin/organisasi');

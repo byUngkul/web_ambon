@@ -16,6 +16,7 @@ class Jabatan extends CI_Controller {
   
   public function index()
   {
+    check_permission();
     $pegawai = $this->pegawai_m->get_all_pegawai();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $jabatan = $this->jabatan_m->get_jabatan()->result();
@@ -36,6 +37,7 @@ class Jabatan extends CI_Controller {
 
   public function add()
   {
+    check_permission();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_all_desas();
 
@@ -69,6 +71,7 @@ class Jabatan extends CI_Controller {
 
   public function edit($id = null)
   {
+    check_permission();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_all_desas();
     $jabatan = $this->jabatan_m->get_jabatan($id)->row();
@@ -95,6 +98,7 @@ class Jabatan extends CI_Controller {
 
   public function delete($id = null)
   {
+    check_permission();
     $this->jabatan_m->delete($id);
 
     redirect('admin/jabatan');

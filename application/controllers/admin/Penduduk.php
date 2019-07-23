@@ -8,9 +8,7 @@ class Penduduk extends CI_Controller {
   }
   public function index()
   {
-    if($this->session->userdata('level') != 1){
-      redirect('admin/penduduk/detile/'.$this->session->userdata('desaid'));
-    }
+    check_permission();
 
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_all_desas();
@@ -29,6 +27,7 @@ class Penduduk extends CI_Controller {
 
   public function detile($desa_id = null)
   {
+    check_permission();
     // $kecamat = $this->desas_m->get_desa(null, 'yes');
     $kecamat = $this->desas_m->get_desa(NULL, 'yes');
     $desa = $this->desas_m->get_desa($desa_id);
@@ -56,6 +55,7 @@ class Penduduk extends CI_Controller {
 
   public function add_kateg()
   {
+    check_permission();
     $desa = $this->desas_m->get_all_desas();
     $post = $this->input->post();
 
@@ -69,6 +69,7 @@ class Penduduk extends CI_Controller {
 
   public function update_kateg()
   {
+    check_permission();
     $desa = $this->desas_m->get_all_desas();
 
     foreach($desa as $row) {
@@ -84,6 +85,7 @@ class Penduduk extends CI_Controller {
 
   public function delete_kateg()
   {
+    check_permission();
     $desa_id = $this->uri->segment(4);
     $param = $this->uri->segment(5);  
     
@@ -93,6 +95,7 @@ class Penduduk extends CI_Controller {
 
   public function add_jkateg()
   {
+    check_permission();
     $desa = $this->db->select('desa_id')->get('desa')->result_array();
     $post = $this->input->post();
     foreach($desa as $row) {
@@ -109,6 +112,7 @@ class Penduduk extends CI_Controller {
 
   public function edit_jkateg()
   {
+    check_permission();
     $desa_id = $this->uri->segment(4);
     $kl_text = urldecode($this->uri->segment(5));
     $kecamat = $this->desas_m->get_desa(NULL, 'yes');
@@ -142,6 +146,7 @@ class Penduduk extends CI_Controller {
 
   public function edit_val()
   {
+    check_permission();
     $desa_id = $this->uri->segment(4);
     $kl_id = urldecode($this->uri->segment(5));
     $kecamat = $this->desas_m->get_desa(NULL, 'yes');

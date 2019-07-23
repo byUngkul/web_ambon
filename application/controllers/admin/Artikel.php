@@ -12,10 +12,21 @@ class Artikel extends CI_Controller {
      $this->load->library('form_validation');
   }
 
+  function path(){
+    $path[1] = $this->uri->segment(1);
+    $path[2] = $this->uri->segment(2);
+    $path[3] = $this->uri->segment(3);
+
+    return $path;
+  }
+
   public function index() {
+    check_permission();
+
     $artikel = $this->article_m->get_all_posts();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
-    // var_dump($artikel);
+    // var_dump($link);
+    // var_dump($get_uri);
     $data = array(
       'menu' => '2',
       'kecamatan' => $kecamat,
@@ -29,6 +40,8 @@ class Artikel extends CI_Controller {
   }
 
   public function add() {
+    check_permission();
+
     $categ = $this->category_m->list_category();
     $desas = $this->desas_m->get_all_desas();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
@@ -61,12 +74,12 @@ class Artikel extends CI_Controller {
   }
 
   public function edit($id) {
+    check_permission();
+
     $categ = $this->category_m->list_category();
     $desas = $this->desas_m->get_all_desas();
     $artikel = $this->article_m->get_post_edit($id);
     $kecamat = $this->desas_m->get_desa(null, 'yes');
-
-    // var_dump($artikel);
 
     $data = array(
       'menu' => '2',
@@ -92,6 +105,7 @@ class Artikel extends CI_Controller {
   }
 
   public function delete($id) {
+    check_permission();
     $this->article_m->delete_posts($id);
 
     redirect('admin/artikel');

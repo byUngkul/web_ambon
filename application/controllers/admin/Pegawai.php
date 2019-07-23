@@ -14,6 +14,8 @@ class Pegawai extends CI_Controller {
 
   public function index()
   {
+    check_permission();
+
     $pegawai = $this->pegawai_m->get_all_pegawai();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
 
@@ -31,6 +33,7 @@ class Pegawai extends CI_Controller {
 
   public function add()
   {
+    check_permission();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_all_desas();
 
@@ -62,6 +65,7 @@ class Pegawai extends CI_Controller {
 
   public function edit($id)
   {
+    check_permission();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $pegawai = $this->pegawai_m->get_pegawai($id);
     $desa = $this->desas_m->get_all_desas();
@@ -89,6 +93,7 @@ class Pegawai extends CI_Controller {
 
   public function delete($id) 
   {
+    check_permission();
     $this->pegawai_m->delete($id);
 
     redirect('admin/pegawai');

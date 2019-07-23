@@ -12,9 +12,7 @@ class Infrastruktur extends CI_Controller {
 
   public function index()
   {
-    if($this->session->userdata('level') != 1){
-      redirect('admin/infrastruktur/detile/'.$this->session->userdata('desaid'));
-    }
+    check_permission();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_all_desas();
 
@@ -32,6 +30,7 @@ class Infrastruktur extends CI_Controller {
 
   public function detile($desa_id = null)
   {
+    check_permission();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_desa($desa_id, null);
     $j_infra = $this->infrastruktur_m->get_j_infra()->result_array();
@@ -53,6 +52,7 @@ class Infrastruktur extends CI_Controller {
 
   public function add_jenis()
   {
+    check_permission();
     $this->infrastruktur_m->add_j_infra();
     $desa_id = $this->input->post("desa_id");
 
@@ -61,6 +61,7 @@ class Infrastruktur extends CI_Controller {
 
   public function add_infra()
   {
+    check_permission();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa_id = $this->uri->segment(4);
     $j_infra = $this->uri->segment(5);
@@ -94,6 +95,7 @@ class Infrastruktur extends CI_Controller {
 
   public function edit_infra()
   {
+    check_permission();
     $desa_id = $this->uri->segment(4);
     $id_infra = $this->uri->segment(5);
     $kecamat = $this->desas_m->get_desa(null, 'yes');
@@ -122,6 +124,7 @@ class Infrastruktur extends CI_Controller {
 
   public function delete_infra()
   {
+    check_permission();
     $desa_id = $this->uri->segment(4);
     $id_infra = $this->uri->segment(5);
     $this->infrastruktur_m->delete_infra($id_infra);

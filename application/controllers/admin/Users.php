@@ -15,7 +15,7 @@ class Users extends CI_Controller{
   
   public function index()
   {
-      check_admin();
+      check_permission();
      $user = $this->auth_model->get();
      $kecamat = $this->desas_m->get_desa(null, 'yes');
 
@@ -33,6 +33,7 @@ class Users extends CI_Controller{
 
   public function add()
   {
+   check_permission();
     $user = $this->auth_model->get();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_all_desas();
@@ -74,8 +75,9 @@ class Users extends CI_Controller{
      }
   }
 
-  public function edit($id)
+  public function edit($id = null)
   {
+   // check_permission();
      $this->form_validation->set_rules('nama', 'Nama', 'required');
      $this->form_validation->set_rules('username', 'Username', 'required|min_length[4]|callback_username_check');
      if($this->input->post('password')) {
@@ -94,7 +96,11 @@ class Users extends CI_Controller{
 
      $this->form_validation->set_error_delimiters('<span class="help-block">', '</span>');
 
-     $user = $this->auth_model->get($id)->row();
+     if(!empty($id)) {
+      $user = $this->auth_model->get($id)->row();
+     } else {
+      $user = $this->auth_model->get($this->session->userdata('userid'))->row();
+     }
      $kecamat = $this->desas_m->get_desa(null, 'yes');
      $desa = $this->desas_m->get_all_desas();
 
@@ -144,11 +150,39 @@ class Users extends CI_Controller{
 
   public function delete($id = null)
   {
+   check_permission();
      $this->auth_model->delete($id);
 
      if($this->db->affected_rows() > 0) {
         echo "<script>alert('Data berhasil di hapus!');</script>";
      }
      echo "<script>window.location='".site_url('admin/users')."';</script>";
+  }
+
+  public function privilege($id = null)
+  {
+      $kecamat = $this->desas_m->get_desa(null, 'yes');
+      $desa = $this->desas_m->get_all_desas();
+      $user = $this->auth_model->get($id)->row();
+      $menu = $this->menu->get_all()->result();
+      $post = $this->input->post();
+
+      $data = array(
+      'menu' => '8',
+      'kecamatan' => $kecamat,
+      'title' => 'User: tambah',
+      'page' => 'User Setting',
+      'content' => '_admin/user/privilege',
+      'user' => $user,
+      'menu' => $menu,
+      'desas' => $desa
+      );
+
+      
+      if (!$post > 0) {
+         $this->load->view('_admin/main', $data);
+      } else {
+         echo json_encode($post);
+      }
   }
 }

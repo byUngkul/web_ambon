@@ -12,6 +12,7 @@ class Potensi extends CI_Controller {
 
   public function index()
   {
+    check_permission();
     if($this->session->userdata('level') != 1){
       redirect('admin/potensi/detile/'.$this->session->userdata('desaid'));
     }
@@ -32,6 +33,7 @@ class Potensi extends CI_Controller {
 
   public function detile($desa_id = null)
   {
+    check_permission();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_desa($desa_id, null);
     $j_potensi = $this->potensi_m->get_j_potensi()->result_array();
@@ -53,6 +55,7 @@ class Potensi extends CI_Controller {
 
   public function add_jenis()
   {
+    check_permission();
     $this->potensi_m->add_j_potensi();
     $desa_id = $this->input->post("desa_id");
 
@@ -61,6 +64,7 @@ class Potensi extends CI_Controller {
 
   public function add_potensi()
   {
+    check_permission();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa_id = $this->uri->segment(4);
     $j_potensi = $this->uri->segment(5);
@@ -92,6 +96,7 @@ class Potensi extends CI_Controller {
 
   public function edit_potensi()
   {
+    check_permission();
     $desa_id = $this->uri->segment(4);
     $j_potensi = $this->uri->segment(5);
     $kecamat = $this->desas_m->get_desa(null, 'yes');
@@ -120,6 +125,7 @@ class Potensi extends CI_Controller {
 
   public function delete_potensi()
   {
+    check_permission();
     $desa_id = $this->uri->segment(4);
     $id_potensi = $this->uri->segment(5);
     $this->potensi_m->delete_potensi($id_potensi);

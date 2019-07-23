@@ -14,6 +14,7 @@ class Main extends CI_Controller {
   
   public function index()
   {
+    check_permission();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
 
     $data['kecamatan'] = $kecamat;
