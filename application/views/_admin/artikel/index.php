@@ -1,0 +1,44 @@
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-file-alt fa-lg"></i>
+    <?= $title ?>
+    <a href="<?= site_url('admin/artikel/add')?>" class="btn btn-primary btn-sm float-right"><span><i class="fas fa-plus"></i></span> Tambah</a>
+  </div>
+  
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-hover table-sm" id="dataTable" width="100%" cellspacing="0">
+        <thead class="thead-light">
+          <tr>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Content</th>
+            <th>Date added</th>
+            <th>Published</th>
+            <th style="width: 85px"></th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <?php foreach($artikel as $row): ?>
+          <tr>
+            <td><?= $row->title ?></td>
+            <td><?= $row->categ ?></td>
+            <td><?= word_limiter($row->body, 20) ?></td>
+            <td><?= $row->created_at ?></td>
+            <td><?= $row->published ?></td>
+            <td align="center">
+              <a href="<?= site_url('admin/artikel/edit/'.$row->id)?>" class="btn btn-primary btn-sm" title="Edit"><i class="fas fa-edit"></i></a>
+              <button class="btn btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#Delete<?= $row->id ?>">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</div>
+<?php $this->load->view('_admin/artikel/delete'); ?>
