@@ -20,14 +20,14 @@
                     </<a>
                     <div class='dropdown-menu' id='' aria-labelledby='#pagesDropdown'>
                   ";
-                if($menu_child->num_rows() > 0){
+                // if($menu_child->num_rows() > 0){
                     
                     foreach ($menu_child->result() as $mchld) {
                       echo "
-                          <a class='dropdown-item' href='".base_url()."$mchld->menulink'><span class='fas fa-angle-double-right'></span>".$mchld->menuname."</a>   
+                          <a class='dropdown-item' href='".base_url()."$mchld->menulink'><span class='fas fa-angle-double-right'></span> ".$mchld->menuname."</a>   
                       ";
                     }
-                  }
+                  // }
                   echo "</div>";
                 echo "</li>";
               } else {

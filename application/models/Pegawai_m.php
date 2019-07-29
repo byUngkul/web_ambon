@@ -2,7 +2,10 @@
 
 class Pegawai_m extends CI_Model {
 
-  public function get_all_pegawai() {
+  public function get_all_pegawai($id_desa='') {
+    if ($id_desa != '') {
+      $this->db->where('id_desa', $id_desa);
+    }
     $query = $this->db->get('pegawai');
     return $query->result();
   }

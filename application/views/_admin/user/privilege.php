@@ -9,7 +9,7 @@ $desa_id = $this->session->userdata('desaid');
   </div>
   
   <div class="card-body">
-    <form action="<?= site_url('admin/users/privilege') ?>" method="post">
+    <form action="<?= site_url('admin/users/save_privilage') ?>" method="post">
       
       <div class="form-group form-group-sm <?php echo form_error('nama') ? 'has-error' : null?>">
         <label>Nama</label>
@@ -26,13 +26,16 @@ $desa_id = $this->session->userdata('desaid');
       <h4>Hak Akses</h4>
       <?php foreach($menu as $menus): ?>
         <h5 class="font-weight-normal"><?= $menus->menuname ?></h5><hr>
-        <?php 
-          $resrc = $this->menu->get_resource($menus->menuid)->result_array();
+        <?php
+          
+          $resrc = $this->menu->get_resource($menus->menuid)->result_array();          
           foreach($resrc as $res):
         ?>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="akses[]" value="<?= $res['id_resource'] ?>">
+          
+            <input class="form-check-input" <?php if(in_array($res['id_resource'], $permits)) {echo "checked";} ?> type="checkbox" name="akses[]" value="<?= $res['id_resource'] ?>" >
             <label class="form-check-label" for="inlineCheckbox1"><em><?= $res['nama_resource'] ?></em></label>
+              
           </div>
         <?php endforeach; ?>
       <?php endforeach; ?>

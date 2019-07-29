@@ -2,10 +2,14 @@
 
 class Jabatan_m extends CI_Model {
 
-  public function get_jabatan($id = null) {
-    if($id != null) {
+  public function get_jabatan($id='', $id_desa='nll') {
+    if($id != '') {
       $this->db->where('id', $id);
     }
+    if($id_desa != '') {
+      $this->db->where('id_desa', $id_desa);
+    }
+
     $this->db->join('desa', 'desa.desa_id = jabatan.id_desa');
     $result = $this->db->get('jabatan');
     return $result;

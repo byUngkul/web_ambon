@@ -12,9 +12,26 @@ class Organisasi extends CI_Controller{
   {
     check_permission();
     if($this->session->userdata('level') != 1){
-      redirect('admin/main');
+      redirect('admin/organisasi/detile/'.$this->session->userdata('desaid'));
     }
-    $orgData = $this->organisasi_m->get_organ();
+    $kecamat = $this->desas_m->get_desa(null, 'yes');
+    $desa = $this->desas_m->get_all_desas();
+
+    $data = array(
+      'kecamatan' => $kecamat,
+      'title' => 'Potenis: list',
+      'page' => 'Data Potensi',
+      'content' => '_admin/organisasi/index',
+      'desas' => $desa
+    );
+
+    $this->load->view('_admin/main', $data);
+  }
+
+  public function detile($id_desa)
+  {
+    // check_permission();
+    $orgData = $this->organisasi_m->get_organ(NULL, $id_desa, NULL);
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     // var_dump($orgData->result());
     $data = array(
@@ -22,7 +39,8 @@ class Organisasi extends CI_Controller{
       'kecamatan' => $kecamat,
       'title' => 'Struktur organisasi',
       'page' => 'Struktur organisasi',
-      'content' => '_admin/organisasi/index',
+      'content' => '_admin/organisasi/detile',
+      'id_desa' => $id_desa,
       'orgData' => $orgData
     );
 
@@ -35,7 +53,7 @@ class Organisasi extends CI_Controller{
     $post = $this->input->post();
     $this->organisasi_m->add_item($post);
 
-    redirect('admin/organisasi');
+    redirect('admin/organisasi/detile/'.$post['id_pem']);
   }
 
   public function edit_item()
@@ -44,14 +62,16 @@ class Organisasi extends CI_Controller{
     $post = $this->input->post();
     $this->organisasi_m->update_item($post);
 
-    redirect('admin/organisasi');
+    redirect('admin/organisasi/detile/'.$post['id_pem']);
   }
 
-  public function delete_item($id)
+  public function delete_item()
   {
     check_permission();
+    $id = $this->uri->segment(5);
+    $id_desa = $this->uri->segment(4);
     $this->db->delete('organisasi', array('id'=>$id));
     
-    redirect('admin/organisasi');
+    redirect('admin/organisasi/detile/'.$id_desa);
   }
 }

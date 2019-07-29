@@ -102,15 +102,7 @@
                     echo "{id: ".$dt['id'].", id_peg: ".$dt['id_p'].", jabatan: '".$dt['nama_jb']."', name: '".$dt['nama']."', parent: ".$dt['id_parent']."},";
                 }
                 ?>];
-            // var testData = [
-            //     {id: 1, jabatan: 'CAMAT', name: 'Nama Camat', parent: 0},
-            //     {id: 2, jabatan: 'SEKMAT', name: 'Nama Sekmat', parent: 1},
-            //     {id: 3, jabatan: 'KASI 1', name: 'Nama KASI', parent: 2},
-            //     {id: 4, jabatan: 'KASI 2', name: 'Nama KASI', parent: 2},
-            //     {id: 5, jabatan: 'KASI 3', name: 'Nama KASI', parent: 2},
-            //     {id: 6, jabatan: 'Staff 1', name: 'Nama Staff', parent: 4},
-            //     {id: 7, jabatan: 'Staff 2', name: 'Nama Staff', parent: 4}
-            // ];
+                
             $(function(){
                 org_chart = $('#orgChart').orgChart({
                     data: testData,

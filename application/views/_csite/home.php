@@ -1,6 +1,5 @@
 <?php
 $desa_id = $pemerintah->desa_id;
-// var_dump($desa_id);
 ?>
 <div id="preloader"></div>     
        
@@ -146,36 +145,37 @@ $desa_id = $pemerintah->desa_id;
                       $this->db->order_by('posts.id', 'DESC');
                       $this->db->join('categories', 'categories.id = posts.category_id');
                       $this->db->join('desa', 'desa.desa_id = posts.desa_id');
+                      $this->db->limit('3');
                       $this->db->where('posts.desa_id', $desa_id);
                       $artikel = $this->db->get('posts')->result();
                       // var_dump($artikel);
                        foreach($artikel as $post) :
                            $create_at = date("d-M-Y", strtotime($post->created_at));
                    ?>
-                         <div class="col-md-4 col-sm-4 col-xs-12">
-                               <div class="single-blog">
-                                   <div class="single-blog-img">
-                                       <a href="<?= site_url('/ciste/view/'.$post->slug) ?>">
-                                           <img src="<?= site_url('assets/images/articles/'.$post->post_image); ?>" alt="">
-                                       </a>
-                                   </div>
-                                   <div class="blog-meta">
-                                       <span class="comments-type">
-                                           <i class="fa fa-comment-o"></i>
-                                           <a href="#">0 komentar</a>
-                                       </span>
-                                       <span class="date-type"><i class="fa fa-calendar"></i><?= $create_at ?></span>
-                                   </div>
-                                   <div class="blog-text">
-                                       <h4><a href="<?= site_url('/csite/view/'.$post->slug) ?>"><?= $post->title?></a></h4>
-                                       <p style="text-align:justify"><?= word_limiter($post->body, 35) ?><a href="#">...baca Selengkapnya</a></p>
-                                   </div>                                
-                               </div>
-                           </div>          
-                   <?php endforeach; ?>     
-                     <div class="single-blog">
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="single-blog">
+                                    <div class="single-blog-img">
+                                        <a href="<?= site_url('/ciste/view/'.$post->slug) ?>">
+                                            <img src="<?= site_url('assets/images/articles/'.$post->post_image); ?>" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="blog-meta">
+                                        <span class="comments-type">
+                                            <i class="fa fa-comment-o"></i>
+                                            <a href="#">0 komentar</a>
+                                        </span>
+                                        <span class="date-type"><i class="fa fa-calendar"></i><?= $create_at ?></span>
+                                    </div>
+                                    <div class="blog-text">
+                                        <h4><a href="<?= site_url('/csite/view/'.$post->slug) ?>"><?= $post->title?></a></h4>
+                                        <p style="text-align:justify"><?= word_limiter($post->body, 35) ?><a href="#">...baca Selengkapnya</a></p>
+                                    </div>                                
+                                </div>
+                              </div>          
+                   <?php endforeach; ?></div>
+                        <div class="single-blog">
                            <center><span><a href="<?php echo base_url();?>pemerintahan/<?= $slug ?>/kegiatan" class="ready-btn">Kegiatan Selengkapnya</a></span></center>
-                       </div>
+                        </div>
                    </div>
                </div>                <!-- End Right Blog-->
            </div>

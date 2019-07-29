@@ -34,6 +34,10 @@ class Users extends CI_Controller{
   public function add()
   {
    check_permission();
+   if($this->session->userdata('level') != 1){
+      redirect('admin/users/edit/'.$this->session->userdata('desaid'));
+   }
+
     $user = $this->auth_model->get();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_all_desas();
@@ -165,8 +169,14 @@ class Users extends CI_Controller{
       $desa = $this->desas_m->get_all_desas();
       $user = $this->auth_model->get($id)->row();
       $menu = $this->menu->get_all()->result();
-      $post = $this->input->post();
+      $permits = array();
 
+      $this->db->where('id_user', $id);
+      $permission = $this->db->get('permission')->result();
+      foreach($permission as $permit){
+         $permits[] = $permit->id_resource;
+      }
+      // var_dump($permits);
       $data = array(
       'menu' => '8',
       'kecamatan' => $kecamat,
@@ -175,14 +185,39 @@ class Users extends CI_Controller{
       'content' => '_admin/user/privilege',
       'user' => $user,
       'menu' => $menu,
+      'permits' => $permits,
       'desas' => $desa
       );
+      $this->load->view('_admin/main', $data);  
+  }
 
-      
-      if (!$post > 0) {
-         $this->load->view('_admin/main', $data);
-      } else {
-         echo json_encode($post);
+  public function save_privilage()
+  {
+   $post = $this->input->post();
+   $this->db->where('id_user', $post['user_id']);
+   $permission = $this->db->get('permission')->result();
+   $acc[] = $post['akses'];
+   $permits = array();
+   // looping buat nampung data permission dari db
+   foreach($permission as $permit){
+      $permits[] = $permit->id_resource;
+   }
+   // looping buat nambah permisi kalo belum ada
+   foreach($post['akses'] as $key=>$akses){
+      if(!in_array($akses, $permits)){
+         // echo "gak ada<br>";
+         $this->menu->insert_permit($akses, $post);
       }
+   }
+   // looping buat nyabut permission di db
+   foreach($permission as $key=>$pr){
+      echo "index ".$key." adalah ".$pr->id_resource."<br>";
+      if(!in_array($pr->id_resource, $post['akses'])){
+         echo "gak ada di array<br>";
+         $this->db->delete('permission', array("id_resource"=>$pr->id_resource));
+      }
+   }
+
+   redirect('admin/users');
   }
 }

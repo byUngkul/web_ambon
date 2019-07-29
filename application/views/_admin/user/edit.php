@@ -1,5 +1,10 @@
 <?php
 $desa_id = $this->session->userdata('desaid');
+if($this->session->userdata('level') != 1){
+  $lihat = "readonly";
+} else {
+  $lihat = "";
+}
 ?>
 <div class="card mb-3">
   <div class="card-header">
@@ -40,7 +45,7 @@ $desa_id = $this->session->userdata('desaid');
       <div class="col-md-2">
             <div class="form-group">
               <label>Level</label>
-              <select name="level" id="level" class="form-control form-control-sm">
+              <select name="level" id="level" class="form-control form-control-sm" <?= $lihat ?>>
                 <option value="">Pilih</option>
                 <option value="1" <?php if($user->level == "1") {echo "selected";} ?> >Admin</option>
                 <option value="2" <?php if($user->level == "2") {echo "selected";} ?> >Admin kelurahan</option>
@@ -52,7 +57,7 @@ $desa_id = $this->session->userdata('desaid');
         <div class="col-md-2">
             <div class="form-group">
               <label>Active </label>
-              <select name="active" id="active" class="form-control form-control-sm">
+              <select name="active" id="active" class="form-control form-control-sm" <?= $lihat ?>>
                 <option value="1" <?php if($user->active == "1") {echo "selected";} ?> >Yes</option>
                 <option value="2" <?php if($user->active == "2") {echo "selected";} ?> >No</option>
               </select>
@@ -63,7 +68,7 @@ $desa_id = $this->session->userdata('desaid');
 
       <div class="form-group" id="form">
         <label>Kelurahan/Negeri</label>
-        <select name="desa" id="desa" class="form-control form-control-sm col-md-4" readonly>
+        <select name="desa" id="desa" class="form-control form-control-sm col-md-4" <?= $lihat ?>>
           <option value="">Pilih</option>
           <?php foreach($desas as $desa): ?>
           <option value="<?= $desa->desa_id ?>" <?php if($user->desa_id == $desa->desa_id) {echo "selected";} ?> ><?= $desa->nama ?></option>

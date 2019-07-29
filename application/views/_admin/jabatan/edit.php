@@ -2,7 +2,7 @@
   <div class="card-header">
     <i class="fas fa-file-alt"></i>
     <?= $title ?>
-    <a href="<?= site_url('admin/jabatan')?>" class="btn btn-primary btn-sm float-right"><span><i class="fas fa-arrow-left"></i></span> Kembali</a>
+    <a href="<?= site_url('admin/jabatan/detile/'.$jabatan->id_desa)?>" class="btn btn-primary btn-sm float-right"><span><i class="fas fa-arrow-left"></i></span> Kembali</a>
   </div>
   
   <div class="card-body">
@@ -17,13 +17,8 @@
 
       <div class="form-group">
         <label class="col-md-2 col-form-label">Pemerintahan</label>
-        <select name="id_pemerintah" id="id_pemerintah" class="form-control form-control-sm col-md-4">
-            <option value="">Pilih</option>
-          <?php foreach($desa as $key => $row): ?>
-            <option value="<?= $row->desa_id ?>" <?php if($jabatan->id_desa == $row->desa_id) {echo "selected";} ?>> <?= $row->nama ?> </option>
-          <?php endforeach; ?>
-        </select>
-        <?php echo form_error('id_pemerintah'); ?>
+        <input type="text" name="id_pemerintah" value="<?= $jabatan->id_desa?>">
+        
       </div>
 
       <div class="form-group">

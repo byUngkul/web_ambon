@@ -1,5 +1,5 @@
 <!-- Add item Modal-->
-<div class="modal fade" id="addItem" tabindex="5" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="addItem" tabindex="5" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -15,7 +15,7 @@
                 <select name="id_peg" id="id_peg" class="form-control form-control-sm">
                   <option value="">pilih</option>
                   <?php 
-                    $dtPeg = $this->pegawai_m->get_all_pegawai();
+                    $dtPeg = $this->pegawai_m->get_all_pegawai($id_desa);
                     // echo json_encode($dtPeg);
                     foreach($dtPeg as $row):
                   ?>
@@ -29,7 +29,7 @@
                 <select name="id_j" id="id_j" class="form-control form-control-sm">
                   <option value="">pilih</option>
                   <?php 
-                    $dtJabat= $this->jabatan_m->get_jabatan()->result();
+                    $dtJabat= $this->jabatan_m->get_jabatan(NULL, $id_desa)->result();
                     // echo json_encode($dtPeg);
                     foreach($dtJabat as $row):
                   ?>
@@ -49,20 +49,8 @@
                   <?php endforeach; ?>
                 </select>
             </div>
-
-            <div class="form-group">
-                <label>Pemerintahan</label>
-                <select name="id_pem" id="id_pem" class="form-control form-control-sm">
-                  <option value="">pilih</option>
-                  <?php 
-                    $dtPem= $this->desas_m->get_all_desas();
-                    // echo json_encode($dtPeg);
-                    foreach($dtPem as $row):
-                  ?>
-                  <option value="<?= $row->desa_id ?>"><?= $row->nama ?></option>
-                  <?php endforeach; ?>
-                </select>
-            </div>
+            <input type="hidden" name="id_pem" value="<?= $id_desa?>">
+            
         </div>
         <div class="modal-footer">
           <button class="btn btn-success" type="button" data-dismiss="modal">Cancel</button>
@@ -92,7 +80,7 @@
                 <select name="id_peg" id="id_peg" class="form-control form-control-sm">
                   <option value="">pilih</option>
                   <?php 
-                    $dtPeg = $this->pegawai_m->get_all_pegawai();
+                    $dtPeg = $this->pegawai_m->get_all_pegawai($id_desa);
                     // echo json_encode($dtPeg);
                     foreach($dtPeg as $row):
                   ?>
@@ -106,7 +94,7 @@
                 <select name="id_j" id="id_j" class="form-control form-control-sm">
                   <option value="">pilih</option>
                   <?php 
-                    $dtJabat= $this->jabatan_m->get_jabatan()->result();
+                    $dtJabat= $this->jabatan_m->get_jabatan(NULL, $id_desa)->result();
                     // echo json_encode($dtPeg);
                     foreach($dtJabat as $row):
                   ?>
@@ -126,20 +114,8 @@
                   <?php endforeach; ?>
                 </select>
             </div>
-
-            <div class="form-group">
-                <label>Pemerintahan</label>
-                <select name="id_pem" id="id_pem" class="form-control form-control-sm">
-                  <option value="">pilih</option>
-                  <?php 
-                    $dtPem= $this->desas_m->get_all_desas();
-                    // echo json_encode($dtPeg);
-                    foreach($dtPem as $row):
-                  ?>
-                  <option value="<?= $row->desa_id ?>" <?php if($dt['id_desa'] == $row->desa_id) {echo "selected";}?> ><?= $row->nama ?></option>
-                  <?php endforeach; ?>
-                </select>
-            </div>
+            <input type="hidden" name="id_pem" value="<?= $id_desa ?>">
+            
         </div>
         <div class="modal-footer">
           <button class="btn btn-success" type="button" data-dismiss="modal">Cancel</button>

@@ -9,6 +9,9 @@ class Penduduk extends CI_Controller {
   public function index()
   {
     check_permission();
+    if($this->session->userdata('level') != 1){
+      redirect('admin/penduduk/detile/'.$this->session->userdata('desaid'));
+    }
 
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_all_desas();

@@ -5,7 +5,7 @@ class Article_m extends CI_Model {
   //   $this->load->database();  
   // }
 
-  public function get_posts($slug = FALSE, $limit = FALSE, $offset = FALSE, $category_id = NULL) // by category
+  public function get_posts($slug = FALSE, $limit = FALSE, $offset = FALSE, $category_id = NULL, $id_pem = NULL) // by category
   {
     if($limit){
       $this->db->limit($limit, $offset);
@@ -13,6 +13,10 @@ class Article_m extends CI_Model {
 
     if($slug === TRUE) {
       $this->db->select('posts.*, users.user_id, users.name, desa.desa_id, desa.nama as nama_desa, desa.slug as slug_ds');
+    }
+
+    if (!empty($id_pem)) {
+      $this->db->where('posts.desa_id', $id_pem);
     }
     
     $this->db->join('users', 'users.user_id = posts.user_id');

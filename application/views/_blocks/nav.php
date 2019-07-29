@@ -15,7 +15,7 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <!-- Brand -->
-                                <img src="<?=base_url()?>assets/images/logo-ambon.png" width="60px" style="float:left;margin-top:5px">
+                                <img src="<?=base_url()?>assets/images/logo/<?= $kecamatan->logo ?>" width="60px" style="float:left;margin-top:5px">
                                 <a class="navbar-brand page-scroll sticky-logo" href="<?= site_url()?>">                                    
                                     <h1><span><?= $kecamatan->nama ?></span> </h1>
                                 </a>

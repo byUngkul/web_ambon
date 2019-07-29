@@ -6,7 +6,7 @@
   </div>
   
   <div class="card-body">
-    <form action="<?= site_url('admin/users/add') ?>" method="post">
+    <form action="<?= site_url('admin/users/add') ?>" method="post" enctype="multipart/form-data">
       
       <div class="form-group form-group-sm <?php echo form_error('nama') ? 'has-error' : null?>">
         <label>Nama *</label>

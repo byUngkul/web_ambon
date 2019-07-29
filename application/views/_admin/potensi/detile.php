@@ -7,7 +7,12 @@
   
   <div class="card-body">
     <div class="table-responsive">
-		<button class="btn btn-secondary btn-sm " title="Tambah Jenis Potensi" data-toggle="modal" data-target="#AddJenis"><span class="fas fa-plus"></span> Jenis Potensi</button><br><br>
+		<?php
+			if ($this->session->userdata('level') == 1) {
+				echo '<button class="btn btn-secondary btn-sm " title="Tambah Jenis Potensi" data-toggle="modal" data-target="#AddJenis"><span class="fas fa-plus"></span> Jenis Potensi</button><br><br>';
+			}
+		?>
+		
 			<?php foreach($j_potensi as $j_potensi): ?> 
 			
 					<table class="table table-hover table-sm">

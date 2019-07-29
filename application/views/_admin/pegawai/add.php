@@ -9,6 +9,7 @@
     <form action="<?= site_url('admin/pegawai/add')?>" enctype="multipart/form-data" method="post">
       
       <?php echo validation_errors() ?>
+      <input type="hidden" name="id_pem" value="<?= $id_desa ?>">
       <div class="form-group form-group-sm">
         <label>Nama *</label>
         <input type="text" name="nama" class="form-control form-control-sm col-md-4">
@@ -19,15 +20,8 @@
         <input type="text" name="nip" class="form-control form-control-sm col-md-4">
       </div>
       
-      <div class="form-group">
-        <label>Pemerintahan</label>
-        <select name="id_pem" id="id_pem" class="form-control form-control-sm col-md-4">
-          <!-- <option value="">Pilih</option> -->
-          <?php foreach($desa as $val): ?>
-            <option value="<?= $val->desa_id ?>"><?= $val->nama ?></option>
-          <?php endforeach; ?>
-        </select>
-      </div>
+      
+      
       
       <div class="row">
        <div class="col-md-2">
@@ -79,10 +73,10 @@
         </div>
       </div>
 
-      <div class="form-group">
-        <label>Urutan</label>
-        <input type="number" class="form-control form-control-sm col-sm-2" name="urutan">
-      </div>
+      <!-- <div class="form-group">
+        <label>Urutan</label> -->
+        <input type="hidden" class="form-control form-control-sm col-sm-2" name="urutan">
+      <!-- </div> -->
 
       <div class="row">
         <div class="col-md-4">

@@ -2,12 +2,12 @@
 <html lang="id-ID">
 	<head>
 		<meta charset="utf-8">
-		<title><?= $kecamatan->nama?> - Beranda</title>
+		<title><?= $kecamatan->nama?></title>
 		<meta name="keywords" content="Kecamatan Sirimau">
 		<meta name="description" content="Situs Resmi Kecamatan Sirimau">
 		<meta content="width=device-width, initial-scale=1.0" name="viewport">
-		<link href="../assets/images/favicon.ico" rel="icon">
-		<link href="../assets/images/favicon.ico" rel="apple-touch-icon">            
+		<link href="../assets/images/logo/<?= $kecamatan->logo?>" rel="icon">
+		<link href="../assets/images/logo/<?= $kecamatan->logo?>" rel="apple-touch-icon">            
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" media="all" rel="stylesheet"/>
 		<link href="<?= base_url().'assets/css/bootstrap/css/bootstrap.min.css?c=assets/css/bootstrap/css/bootstrap.min.css?c='?>" media="all" rel="stylesheet"/>
 		<link href="<?= base_url().'assets/css/nivo-slider/css/nivo-slider.css?c='?>" media="all" rel="stylesheet"/>

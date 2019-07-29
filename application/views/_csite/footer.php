@@ -92,7 +92,43 @@
 		<script src="<?=base_url()?>assets/js/jquery/jquery.appear.js?c=" type="text/javascript" charset="utf-8"></script>
 		<script src="<?=base_url()?>assets/js/isotope/isotope.pkgd.min.js?c=" type="text/javascript" charset="utf-8"></script>
         <script src="<?=base_url()?>assets/js/main.js?c=" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.orgchart.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            
+            
+            var testData = [<?php 
+                foreach($orgChart as $dt) {
+                    echo "{id: ".$dt['id'].", id_peg: ".$dt['id_p'].", jabatan: '".$dt['nama_jb']."', name: '".$dt['nama']."', parent: ".$dt['id_parent']."},";
+                }
+                ?>];
+                
+            $(function(){
+                org_chart = $('#orgChart').orgChart({
+                    data: testData,
+                    showControls: true,
+                    allowEdit: true,
+                    onAddNode: function(node){ 
+                        log('Created new node on node '+node.data.id);
+                        org_chart.newNode(node.data.id); 
+                    },
+                    onDeleteNode: function(node){
+                        log('Deleted node '+node.data.id);
+                        org_chart.deleteNode(node.data.id); 
+                    },
+                    onClickNode: function(node){
+                        log('Clicked node '+node.data.id);
+                    }
+
+                });
+            });
+
+            // just for example purpose
+            function log(text){
+                $('#consoleOutput').append('<p>'+text+'</p>')
+            }
+        </script>
+
         <script type="text/javascript">
             var lakiData = {
                 label: 'Laki-laki',

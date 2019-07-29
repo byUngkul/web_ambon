@@ -15,16 +15,36 @@ class Pegawai extends CI_Controller {
   public function index()
   {
     check_permission();
+    if($this->session->userdata('level') != 1){
+      redirect('admin/pegawai/detile/'.$this->session->userdata('desaid'));
+    }
+    $kecamat = $this->desas_m->get_desa(null, 'yes');
+    $desa = $this->desas_m->get_all_desas();
 
-    $pegawai = $this->pegawai_m->get_all_pegawai();
+    $data = array(
+      'kecamatan' => $kecamat,
+      'title' => 'Potenis: list',
+      'page' => 'Data Potensi',
+      'content' => '_admin/pegawai/index',
+      'desas' => $desa
+    );
+
+    $this->load->view('_admin/main', $data);
+  }
+
+  public function detile($id_desa)
+  {
+    // check_permission();
+
+    $pegawai = $this->pegawai_m->get_all_pegawai($id_desa);
     $kecamat = $this->desas_m->get_desa(null, 'yes');
 
     $data = array(
-      'menu' => '7',
       'kecamatan' => $kecamat,
       'title' => 'Pegawai: list',
       'page' => 'Data Pegawai',
-      'content' => '_admin/pegawai/index',
+      'content' => '_admin/pegawai/detile',
+      'id_desa' => $id_desa,
       'pegawai' => $pegawai
     );
 
@@ -34,8 +54,12 @@ class Pegawai extends CI_Controller {
   public function add()
   {
     check_permission();
+    $id_desa = $this->uri->segment(4);
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_all_desas();
+
+    $this->form_validation->set_rules('nama', 'Nama Pegawai', 'required');
+    $this->form_validation->set_rules('nip', 'NIP', 'required');
 
     $data = array(
       'menu' => '7',
@@ -44,22 +68,15 @@ class Pegawai extends CI_Controller {
       'title' => 'Pegawai: tambah',
       'page' => 'Tambah Pegawai',
       'content' => '_admin/pegawai/add',
+      'id_desa' => $id_desa
     );
-
-    $this->form_validation->set_rules('nama', 'Nama Pegawai', 'required');
-    $this->form_validation->set_rules('nip', 'NIP', 'required');
 
     if ($this->form_validation->run() === FALSE) {
       $this->load->view('_admin/main', $data);
     } else {
-      // Upload
-
       $this->pegawai_m->insert();
 
-      // Set message
-      $this->session->set_flashdata('post_created', 'Berhasil menambahkan artikel');
-
-      redirect('admin/pegawai');
+      redirect('admin/pegawai/detile/'.$this->input->post('id_pem'));
     }
   }
 
@@ -88,14 +105,16 @@ class Pegawai extends CI_Controller {
     $this->pegawai_m->update();
     $this->session->set_flashdata('post_update', 'Berhasil update artikel');
 
-    redirect('admin/pegawai');
+    redirect('admin/pegawai/detile/'.$this->input->post('id_pem'));
   }
 
   public function delete($id) 
   {
+    $id = $this->uri->segment(5);
+    $id_desa = $this->uri->segment(4);
     check_permission();
     $this->pegawai_m->delete($id);
 
-    redirect('admin/pegawai');
+    redirect('admin/pegawai/detile/'.$id_desa);
   }
 }

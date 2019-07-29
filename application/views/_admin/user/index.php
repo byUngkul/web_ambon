@@ -31,7 +31,9 @@
               <button class="btn btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#Delete<?= $row->user_id ?>">
                 <i class="fas fa-trash-alt"></i>
               </button>
+              <?php if ($this->session->userdata('userid') == 1): ?>
               <a href="<?= site_url('admin/users/privilege/'.$row->user_id) ?>" class="btn btn-info btn-sm"><i class="fas fa-key"></i>&nbsp;|&nbsp;Privilege</a>
+              <?php endif; ?>
             </td>
           </tr>
         <?php endforeach; ?>

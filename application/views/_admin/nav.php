@@ -14,8 +14,13 @@
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user-circle fa-fw"></i> <?= $this->session->userdata('name') ?>
         </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+          <a class="dropdown-item" href="<?= site_url('admin/users/edit/')?>">Ganti Password</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+        </div>
       </li>
       
     </ul>
-    <a class="btn btn-link btn-sm" href="#" data-toggle="modal" data-target="#logoutModal" ><i class="fas fa-arrow-right"></i></a>
+    <!-- <a class="btn btn-link btn-sm" href="#" data-toggle="modal" data-target="#logoutModal" ><i class="fas fa-arrow-right"></i></a> -->
   </nav>

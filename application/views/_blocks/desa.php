@@ -145,7 +145,7 @@
                                             $this->db->from('kependudukan_kl kl');
                                             // $this->db->join('kependudukan_tl tl', 'tl.tl_key = kl.tl_key');
                                             $this->db->where('kl.tl_key', 'pendidikan');
-																						$this->db->group_by('kl.kl_text');
+																						$this->db->group_by('kl_text');
 																						$this->db->order_by('id', 'asc');                                                                                   
 																						$qry = $this->db->get()->result_array();
 																						$qry2 = $this->db->get_where('kependudukan_tl', array('tl_key'=>'penduduk'))->result_array();

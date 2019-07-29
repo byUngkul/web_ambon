@@ -6,12 +6,12 @@
                         <div class="single-blog-page">
                         <!-- search option start -->
                             <form action="#">
-                                <div class="search-option">
+                                <!-- <div class="search-option">
                                     <input type="text" placeholder="Cari...">
                                     <button class="button" type="submit">
                                         <i class="fa fa-search"></i>
                                     </button>
-                                </div>
+                                </div> -->
                             </form>
                             <!-- search option end -->
                         </div>
@@ -78,13 +78,13 @@
                                                     <?php foreach($comments as $comment): ?>
                                                         <div class="comments-details">
                                                             <div class="comments-list-img">
-                                                                <img src="img/blog/b02.jpg" alt="post-author">
+                                                                <!-- <img src="img/blog/b02.jpg" alt="post-author"> -->
                                                             </div>
                                                             <div class="comments-content-wrap">
                                                                     <span>
                                                                         <b><a href="#"><?= $comment['name'] ?></a></b>
                                                                             Post author
-                                                                            <span class="post-time"><?= $comment['created_at'] ?></span>                                                        
+                                                                            <span class="post-time"><?= date('d-m-Y', strtotime($comment['created_at'])) ?></span>                                                        
                                                                     </span>
                                                                     <p><?= $comment['body'] ?></p>
                                                             </div>

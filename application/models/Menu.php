@@ -46,4 +46,19 @@ class Menu extends CI_Model{
     $result = $this->db->get('permission p');
     return $result;
   }
+
+  function insert_permit($param, $post)
+  {
+    $data = [
+      "id_resource" => $param,
+      "id_user" => $post['user_id']
+    ];
+
+    return $this->db->insert('permission', $data);
+  }
+
+  function delete_permit($param)
+  {
+    return $this->db->delete('permission', array("id_resource"=>$param));
+  }
 }

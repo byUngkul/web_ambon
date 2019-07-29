@@ -14,6 +14,9 @@ class Desa extends CI_Controller {
   
   public function index() {
     check_permission();
+    if($this->session->userdata('level') != 1){
+      redirect('admin/desa/edit/'.$this->session->userdata('desaid'));
+    }
     $desa = $this->desas_m->get_all_desas();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     // var_dump($artikel);

@@ -16,4 +16,4 @@
   <script src="<?= base_url()?>assets/backend/js/demo/datatables-demo.js"></script>
 
   <!-- plugin jquery chained -->
-  <script src="<?= base_url()?>assets/backend/js/demo/jquery.chained.js"></script>
+  <!-- <script src="<?= base_url()?>assets/backend/js/demo/jquery.chained.js"></script> -->

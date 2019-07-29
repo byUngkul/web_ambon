@@ -6,7 +6,7 @@ class Jabatan extends CI_Controller {
   {
      parent::__construct();
      // apa sdah login
-    //  check_not_login();
+     check_not_login();
      // cek apakah yang login itu admin
     //  check_admin();
      $this->load->model('auth_model');
@@ -17,18 +17,38 @@ class Jabatan extends CI_Controller {
   public function index()
   {
     check_permission();
+    if($this->session->userdata('level') != 1){
+      redirect('admin/jabatan/detile/'.$this->session->userdata('desaid'));
+    }
+    $kecamat = $this->desas_m->get_desa(null, 'yes');
+    $desa = $this->desas_m->get_all_desas();
+    
+    $data = array(
+      'kecamatan' => $kecamat,
+      'title' => 'Potenis: list',
+      'page' => 'Data Potensi',
+      'content' => '_admin/jabatan/index',
+      'desas' => $desa
+    );
+
+    $this->load->view('_admin/main', $data);
+  }
+
+  public function detile($id_desa)
+  {
+    // check_permission();
     $pegawai = $this->pegawai_m->get_all_pegawai();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
-    $jabatan = $this->jabatan_m->get_jabatan()->result();
+    $jabatan = $this->jabatan_m->get_jabatan(NULL, $id_desa)->result();
 
-    // var_dump($jabatan);
     $data = array(
       'menu' => '4',
       'kecamatan' => $kecamat,
       'jabatan' => $jabatan,
       'title' => 'Jabatan: list',
       'page' => 'Data Jabatan',
-      'content' => '_admin/jabatan/index',
+      'content' => '_admin/jabatan/detile',
+      'id_desa' => $id_desa,
       'pegawai' => $pegawai
     );
 
@@ -48,6 +68,7 @@ class Jabatan extends CI_Controller {
       'title' => 'Jabatan: tambah',
       'page' => 'Tambah Jabatan',
       'content' => '_admin/jabatan/add',
+      'id_desa' => $this->uri->segment(4)
     );
 
     $this->form_validation->set_rules('nama', 'Nama Pegawai', 'required');
@@ -65,7 +86,7 @@ class Jabatan extends CI_Controller {
       // Set message
       $this->session->set_flashdata('post_created', 'Berhasil menambahkan artikel');
 
-      redirect('admin/jabatan');
+      redirect('admin/jabatan/detile/'.$this->input->post('id_pemerintah'));
     }
   }
 
@@ -74,7 +95,7 @@ class Jabatan extends CI_Controller {
     check_permission();
     $kecamat = $this->desas_m->get_desa(null, 'yes');
     $desa = $this->desas_m->get_all_desas();
-    $jabatan = $this->jabatan_m->get_jabatan($id)->row();
+    $jabatan = $this->jabatan_m->get_jabatan($id, NULL)->row();
 
     $data = array(
       'menu' => '4',
@@ -93,14 +114,16 @@ class Jabatan extends CI_Controller {
   {
     $this->jabatan_m->update();
 
-    redirect('admin/jabatan');
+    redirect('admin/jabatan/detile/'.$this->input->post('id_pemerintah'));
   }
 
-  public function delete($id = null)
+  public function delete()
   {
+    $id = $this->uri->segment(5);
+    $id_desa = $this->uri->segment(4);
     check_permission();
     $this->jabatan_m->delete($id);
 
-    redirect('admin/jabatan');
+    redirect('admin/jabatan/detile/'.$id_desa);
   }
 }
